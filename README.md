@@ -12,7 +12,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C:  "International tourism: number of tourists vs. GDP of home country"
 
   Project D:  "International tourism, expenditures (current US$)"
 
@@ -33,7 +33,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C:  [Number of tourists vs level of prosperity of home country] (https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country)
 
   Project D:  [International tourism, expenditures (current US$)](https://data.worldbank.org/indicator/ST.INT.XPND.CD)
 
@@ -45,7 +45,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C:  The data for this project was collected through several avenues. The country prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers 1800s up to 2017.
 
   Project D:  The data was sourced from World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files. and collected by The World Bank. The data is about international tourism expenditures from 1995 to 2018.
 
@@ -55,7 +55,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C:  22,223 rows
 
   Project D:  268 rows
 
@@ -65,7 +65,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C:  6 columns
 
   Project D:  29 columns
 
@@ -75,6 +75,6 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  
+  Project C: Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
   Project D: Question 4: "How tourism has affected a country's economy?"
