@@ -33,7 +33,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project B:  
 
-  Project C:  [Number of tourists vs level of prosperity of home country] (https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country)
+  Project C:  [Number of tourists vs level of prosperity of home country](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country)
 
   Project D:  [International tourism, expenditures (current US$)](https://data.worldbank.org/indicator/ST.INT.XPND.CD)
 
