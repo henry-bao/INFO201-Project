@@ -1,10 +1,9 @@
 # Final Project Description
-Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
 ## Domain of Interest
 1.  Why are you interested in this field/domain?
 
-  Our team is interested in the field of **travel** because we all enjoy traveling around the world. We like exploring new places, experiencing new cultures, taking pictures, and *especially* trying new, authentic food!
+  Our team is interested in the field of **tourism** because we all enjoy traveling around the world. We like exploring new places, experiencing new cultures, taking pictures, and *especially* trying new, authentic food!
 
 2.  What other examples of data driven project have you found related to this domain (share at least 3)?
 
