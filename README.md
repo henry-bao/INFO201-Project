@@ -11,7 +11,7 @@
 
   Project B:  "Number of tourist departures per 1,000 people"
 
-  Project C:  "International tourism: number of tourists vs. GDP of home country"
+  Project C:  ["International tourism: number of tourists vs. GDP of home country"](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country?tab=chart)
 
   Project D:  "International tourism, expenditures (current US$)"
 
