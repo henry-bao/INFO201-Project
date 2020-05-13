@@ -9,7 +9,7 @@
 
   Project A:  "International tourism: Number of arrivals"
 
-  Project B:  
+  Project B:  "Number of tourist departures per 1,000 people"
 
   Project C:  "International tourism: number of tourists vs. GDP of home country"
 
