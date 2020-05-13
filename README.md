@@ -7,7 +7,7 @@
 
 2.  What other examples of data driven project have you found related to this domain (share at least 3)?
 
-  Project A:  "International tourism: Number of arrivals"
+  Project A:  ["International tourism: Number of arrivals"](https://ourworldindata.org/grapher/international-tourism-number-of-arrivals?tab=chart)
 
   Project B:  "Number of tourist departures per 1,000 people"
 
