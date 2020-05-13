@@ -18,7 +18,7 @@ Project D:
 
 3. What data-driven questions do you hope to answer about this domain (share at least 3)?
 
-Question 1: 
+Question 1:
 
 Question 2:
 
@@ -28,6 +28,14 @@ Question 4:
 
 ## Finding Data
 1. Where did you download the data (e.g., a web URL)?
+
+Project A:  
+
+Project B:  
+
+Project C:  
+
+Project D:
 
 2. How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
