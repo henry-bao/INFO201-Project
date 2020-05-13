@@ -9,7 +9,7 @@
 
   Project A:  ["International tourism: Number of arrivals"](https://ourworldindata.org/grapher/international-tourism-number-of-arrivals?tab=chart)
 
-  Project B:  "Number of tourist departures per 1,000 people"
+  Project B:  ["Number of tourist departures per 1,000 people"](https://ourworldindata.org/tourism#all-charts-preview)
 
   Project C:  ["International tourism: number of tourists vs. GDP of home country"](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country?tab=chart)
 
