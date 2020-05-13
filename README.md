@@ -20,7 +20,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Question 1: "Which country do people most travel to each year?"
 
-  Question 2:
+  Question 2: "Of the people traveling out of a country, how many are traveling for reasons other than business?"
 
   Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
@@ -31,7 +31,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project A:  [International arrivals by country](https://ourworldindata.org/grapher/international-tourism-number-of-arrivals)
 
-  Project B:  
+  Project B:  [Number of tourist departures per 1,000 people](https://ourworldindata.org/tourism#all-charts-preview)
 
   Project C:  [Number of tourists vs level of prosperity of home country](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country)
 
@@ -43,7 +43,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   The data is about international tourism, specifically regarding the number of arrivals per country in the time span of 1995 to 2016.
 
-  Project B:  
+  Project B: The data was generated taking population information and tourist departure information from the World Bank's World Development Indicators. Tourism information was gathered from data on flight arrivals and overnight stays along with payment information. Our World in Data took population information and tourist departure information to create the datset: Number of tourist departures per 1,000 people.
 
   Project C:  The data for this project was collected through several avenues. The country prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers 1800s up to 2017.
 
@@ -53,7 +53,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project A:  5209 rows
 
-  Project B:  
+  Project B:  2352 rows
 
   Project C:  22,223 rows
 
@@ -63,7 +63,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project A:  4 columns
 
-  Project B:  
+  Project B:  4 columns
 
   Project C:  6 columns
 
@@ -73,7 +73,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Project A: Question 1: "Which country do people most travel to each year?"
 
-  Project B:  
+  Project B:  "Of the people traveling out of a country, how many are traveling for reasons other than business?"
 
   Project C: Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
