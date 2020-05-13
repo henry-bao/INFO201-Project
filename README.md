@@ -9,6 +9,8 @@
 
   Project A:  ["International tourism: Number of arrivals"](https://ourworldindata.org/grapher/international-tourism-number-of-arrivals?tab=chart)
 
+  This project shows data of the number of tourists who travel and arrive to each country other than their usual residence.
+
   Project B:  ["Number of tourist departures per 1,000 people"](https://ourworldindata.org/tourism#all-charts-preview)
 
   Project C:  ["International tourism: number of tourists vs. GDP of home country"](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country?tab=chart)
@@ -19,6 +21,8 @@
 3. What data-driven questions do you hope to answer about this domain (share at least 3)?
 
   Question 1: "Which country do people most travel to each year?"
+
+  This question can be answered using data by comparing numbers of arrivals per country and identifying which country has the most arrivals of tourists.
 
   Question 2: "Of the people traveling out of a country, how many are traveling for reasons other than business?"
 
