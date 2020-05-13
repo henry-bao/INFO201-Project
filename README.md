@@ -22,7 +22,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
   Question 2:
 
-  Question 3:
+  Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
   Question 4: "How tourism has affected a country's economy?"
 
