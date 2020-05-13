@@ -23,7 +23,7 @@
 
   Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
-  Question 4: "How tourism has affected a country's economy?"
+  Question 4: "How has tourism affected a country's economy?"
 
 ## Finding Data
 1. Where did you download the data (e.g., a web URL)?
@@ -72,8 +72,8 @@
 
   Project A: Question 1: "Which country do people most travel to each year?"
 
-  Project B:  "Of the people traveling out of a country, how many are traveling for reasons other than business?"
+  Project B:  Question 2: "Of the people traveling out of a country, how many are traveling for reasons other than business?"
 
   Project C: Question 3: "Does the wealth of a country affect how many of its citizens travel?"
 
-  Project D: Question 4: "How tourism has affected a country's economy?"
+  Project D: Question 4: "How has tourism affected a country's economy?"
