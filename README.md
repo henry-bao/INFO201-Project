@@ -10,7 +10,7 @@
 
   * Project A:  ["International tourism: Number of arrivals"](https://ourworldindata.org/grapher/international-tourism-number-of-arrivals?tab=chart)
 
-      - This project shows data of the number of tourists who travel and arrive to each country other than their usual residence.
+      - This project shows data of the number of people who travel and arrive to each country other than their usual residence whose main purpose in visiting is not commercial from 1995 to 2016. It also uses color gradient to show the amount of people on an interactive map and a line chart to represent change in numbers over the years per country. 
 
   * Project B:  ["Number of tourist departures per 1,000 people"](https://ourworldindata.org/tourism#all-charts-preview)
 
@@ -33,7 +33,7 @@
 
   * Question 3: "Does the wealth of a country affect how many of its citizens travel?"
     - The question can be answered by comparing the country's GDP to the amount of citizens who leave the country as tourists.
-    
+
   * Question 4: "How does a country's tourism expenditures show the well-being of its economy?"
     - The question can be answered by comparing the country's GDP to its tourism expenditures.
 
