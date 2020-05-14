@@ -16,6 +16,8 @@
 
   * Project C:  ["International tourism: number of tourists vs. GDP of home country"](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country?tab=chart)
 
+      - This project shows data on the relationship between a country's GDP and the number of outbound tourists is has, from the years 1995 to 2016. It also uses color coding to represent what continent each country is part of.
+
   * Project D:  ["International tourism expenditures in current prices"](https://knoema.com/atlas/maps/Tourism-expenditures)
 
       - This project reflects the tourism expenditures of each country by the year and amount of money that was spent, it also used color gradient to show the amount of expenditures on the map.
@@ -30,7 +32,8 @@
   * Question 2: "Of the people traveling out of a country, how many are traveling for reasons other than business?"
 
   * Question 3: "Does the wealth of a country affect how many of its citizens travel?"
-
+    - The question can be answered by comparing the country's GDP to the amount of citizens who leave the country as tourists.
+    
   * Question 4: "How does a country's tourism expenditures show the well-being of its economy?"
     - The question can be answered by comparing the country's GDP to its tourism expenditures.
 
