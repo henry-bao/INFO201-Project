@@ -14,7 +14,7 @@
 
   * Project B:  ["Number of tourist departures per 1,000 people"](https://ourworldindata.org/grapher/number-of-departures-per-1000)
 
-        - This project shows data on the number of departures that people make from their country of residence for reasons other than business. It shows data from 1995 to 2017 and is helpful in displaying which countries have the most people traveling as tourists.
+      - This project shows data on the number of departures that people make from their country of residence for reasons other than business. It shows data from 1995 to 2017 and is helpful in displaying which countries have the most people traveling as tourists.
 
   * Project C:  ["International tourism: number of tourists vs. GDP of home country"](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country?tab=chart)
 
