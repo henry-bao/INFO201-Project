@@ -5,3 +5,5 @@ library(htmltools)
 df <- read.csv("data/tourists-vs-gdp.csv", stringsAsFactors = FALSE)
 
 # Plot
+
+plot <- ggplot()
