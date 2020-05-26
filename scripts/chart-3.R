@@ -15,14 +15,9 @@ world_tourists_vs_gdp <- tourists_vs_gdp %>%
   select(-Code) %>%
   select(-X)
 
-#Creating plot 
+# Creating plot
 chart_3 <- ggplot(data = world_tourists_vs_gdp) +
   geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
-  labs(title = "Total Number of Tourists in the World per Year",
+  labs(title = "World Tourism and GDP by Year",
        fill = "Average GDP per Capita ($)")
-  
-  
-
-
-
