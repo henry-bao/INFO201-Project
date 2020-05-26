@@ -1,8 +1,9 @@
 #Chart 1
-
+## This chart attempts to understand the relationship between 
 #Load libraries
 library("dplyr")
 library("ggplot2")
+library("plotly")
 
 #Load data
 tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
@@ -18,9 +19,12 @@ world_tourists_vs_gdp <- tourists_vs_gdp %>%
 
 #Creating plot 
 chart_1 <- ggplot(data = world_tourists_vs_gdp) +
-  geom_point(mapping = aes(x = Year, y = Tourists,
-                           color = GDP.per.capita)) +
-  labs(title = "Total Number of Tourists in the World per Year",
-       color = "Average GDP per Capita ($)")
+  geom_point(mapping = aes(x = Year, y = GDP.per.capita,
+                           color = Tourists)) +
+  labs(title = "Average GDP per capita in the World per Year",
+       color = "Tourists")
+
+#Making the plot interactive
+ggplotly(chart_1)
 
 chart_1
