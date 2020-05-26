@@ -4,7 +4,7 @@ library("dplyr")
 library("knitr")
 
 #Load data frame
-tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
+tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
                             stringsAsFactors = FALSE)
 
 #Summarize data by years 1995-2016
