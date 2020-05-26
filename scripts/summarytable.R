@@ -9,14 +9,6 @@ tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
 
 #Summarize data by years 1995-2016
 world_tourists_vs_gdp <- tourists_vs_gdp %>%
-  group_by(Year) %>%
-  summarize(
-    avg_GDP_per_capita = mean(GDP.per.capita, na.rm = TRUE),
-    avg_tourists = mean(Tourists, na.rm = TRUE)
-  ) %>%
-  slice(214:235)
-
-world_tourists_vs_gdp <- tourists_vs_gdp %>%
   filter(Entity == "World") %>%
   slice(6:27) %>%
   select(-Entity) %>%
