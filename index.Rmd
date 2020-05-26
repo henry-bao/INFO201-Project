@@ -1,28 +1,17 @@
 ---
-title: "Report"
+title: "Tourists vs GDP Data Report"
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE, warning = FALSE}
+source("./scripts/summarytable.R")
 ```
+## Introduction
+Tourism is a popular economic activity that has developed significantly over the years. It’s an activity that can bring benefit to a country's government and its local residents. Such activity is recognized in almost every nations in the world. Accordingly, for this group project our team is going analyse the correlation between a country's GDP and the number of outbound tourists each country has using the [Number of Tourists vs GDP Data-Set](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country).The data was collected through several avenues. The country prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers 1800s up to 2017.
 
-## R Markdown
+## Summary
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Table
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+`r world_table`
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Charts
