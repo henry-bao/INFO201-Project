@@ -21,7 +21,7 @@ table_caption <- paste("Number of tourists outbound vs level of",
 world_table <- kable(world_tourists_vs_gdp,
                      col.names = c("Year", "GDP per Capita",
                                    "Number of Tourists"),
-                     align = "lccr",
+                     align = "lcr",
                      caption = table_caption)
   
 
