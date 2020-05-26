@@ -15,7 +15,7 @@ Tourism is a popular economic activity that has developed significantly over the
 ```{r, include = FALSE, warning = FALSE}
 info_list <- get_summary_info(df)
 ```
-`r info_list$num_countries`
+In this summary we will be analyzing the data-set above.`r info_list$num_countries`
 
 
 ## Table of Aggregated Data
