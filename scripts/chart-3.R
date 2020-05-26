@@ -15,7 +15,7 @@ world_tourists_vs_gdp <- tourists_vs_gdp %>%
   select(-Code) %>%
   select(-X)
 
-# Creating plot
+# Create plot
 chart_3 <- ggplot(data = world_tourists_vs_gdp) +
   geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
