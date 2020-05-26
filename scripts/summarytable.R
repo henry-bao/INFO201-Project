@@ -13,8 +13,8 @@ world_tourists_vs_gdp <- tourists_vs_gdp %>%
   slice(6:27) %>%
   select(-Entity) %>%
   select(-Code) %>%
-  select(-X)
-  
+  select(-X) %>%
+  round(digits = 2)
 
 #Create table
 table_caption <- paste("Number of tourists outbound vs level of",
@@ -24,5 +24,3 @@ world_table <- kable(world_tourists_vs_gdp,
                                    "Number of Tourists"),
                      align = "lcr",
                      caption = table_caption)
-  
-
