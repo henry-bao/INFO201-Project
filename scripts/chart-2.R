@@ -8,7 +8,7 @@ library(htmltools)
 library(plotly)
 
 #Load data
-tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
+tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
                             stringsAsFactors = FALSE)
 
 #create plotly map function
@@ -29,7 +29,8 @@ get_map <- function(df) {
     )
 
   #hover text
-  hover_text <- paste("Country:", tourists_vs_gdp_2016$Entity, "<br>",
+  hover_text <- paste("GDP:", tourists_vs_gdp_2016$GDP.per.capita, "<br>",
+                    "Country:", tourists_vs_gdp_2016$Entity, "<br>",
                     "Tourists:", tourists_vs_gdp_2016$Tourists)
 
   #create map
