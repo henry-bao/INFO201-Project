@@ -12,7 +12,7 @@ tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
 get_summary_table <- function(df) {
   #Narrow data frame to just "world" data 1995 to 2016
   #There is no group-by function because the dataset already groups
-  #all the countries information into an Entity called "World" in
+  #the date by year into an Entity called "World" in
   #the data frame. Filtering to "World" is the equivalent of grouping
   #by year in this case.
   world_tourists_vs_gdp <- df %>%
