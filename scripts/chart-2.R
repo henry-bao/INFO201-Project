@@ -8,39 +8,40 @@ library(htmltools)
 library(plotly)
 
 #Load data
-tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv", stringsAsFactors = FALSE)
+tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
+                            stringsAsFactors = FALSE)
 
 #create plotly map function
-get_map <- function(df){
-  
+get_map <- function(df) {
+
   #narrow data frame to 2016
   tourists_vs_gdp_2016 <- df %>%
   filter(Year == "2016")
-  
+
   #map light grey boundaries
   l <- list(color = toRGB("grey"), width = 0.5)
-  
+
   #specify map projection/options
   g <- list(
     showframe = FALSE,
     showcoastlines = FALSE,
-    projection = list(type = 'Mercator')
+    projection = list(type = "Mercator")
     )
-  
+
   #hover text
-  hover_text <- paste("Country:", tourists_vs_gdp_2016$Entity, '<br>',
+  hover_text <- paste("Country:", tourists_vs_gdp_2016$Entity, "<br>",
                     "Tourists:", tourists_vs_gdp_2016$Tourists)
-  
+
   #create map
   chloropleth_map <- plot_geo(tourists_vs_gdp_2016) %>%
     add_trace(
-      z = ~GDP.per.capita, color = ~GDP.per.capita, colors = 'Blues',
+      z = ~GDP.per.capita, color = ~GDP.per.capita, colors = "Blues",
       text = hover_text, locations = ~Code, marker = list(line = l)
       ) %>%
-    colorbar(title = 'GDP per capita', tickprefix = '$') %>%
-    layout(title = '2016 Global GDP & Number of Tourists',
+    colorbar(title = "GDP per capita", tickprefix = "$") %>%
+    layout(title = "2016 Global GDP & Number of Tourists",
          geo = g)
-  
+
   #return map
   chloropleth_map
-  }
+}
