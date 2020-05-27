@@ -9,7 +9,7 @@ library("ggplot2")
 library("plotly")
 
 #Load data
-tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
+tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
                             stringsAsFactors = FALSE)
 
 # Creat plot function
