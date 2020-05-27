@@ -23,7 +23,7 @@ tourists_vs_gdp_2000_2016 <- tourists_vs_gdp %>%
 #Creating plot 
 chart_1 <- ggplot(data = tourists_vs_gdp_2000_2016) +
   geom_point(mapping = aes(x = GDP.per.capita, y = Tourists,
-                           color = Year, text = paste("Country:", Entity))
+                           color = Year, text = paste("Entity:", Entity))
              ) +
   labs(
     title = "Average GDP per capita and Tourists from 2000 to 2016",
