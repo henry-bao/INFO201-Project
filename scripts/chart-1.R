@@ -26,7 +26,8 @@ chart_1 <- ggplot(data = tourists_vs_gdp_2000_2016) +
                            color = Year, text = paste("Entity:", Entity))
              ) +
   labs(
-    title = "Average GDP per capita and Tourists from 2000 to 2016",
+    title = "Number of tourists outbound vs level of
+    prosperity of the home country, 2000 to 2016",
     x = "GDP per capita", color = "Year")
 
 #Making the plot interactive
