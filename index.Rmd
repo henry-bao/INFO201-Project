@@ -43,7 +43,7 @@ This plot shows the relationship between number of outbound tourists and prosper
 get_map(df)
 ```
 
-This is an interactive world map that displays the GDP per Capita of each country through the gradient of blue shown on the map. This map also proves the interpretations above, take China for example, it has lower GDP per Capita than Canada, but has more tourists outbound.
+This is an interactive world map that displays the GDP per Capita of each country through the gradient of blue shown on the map. When hovering over a country, it provides more exact information (specific GDP per Capita, country name, and number of tourists outbound from that country). This map also proves the interpretations above, take China for example, it has lower GDP per Capita than Canada, but has more tourists outbound.
 
 ### Chart 3
 ```{r echo = FALSE, warning = FALSE}
