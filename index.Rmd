@@ -50,4 +50,4 @@ This is an interactive world map that displays the GDP per Capita of each countr
 get_bar_graph(df)
 ```
 
-From this _Total Number of Tourists in the World per Year_ plot we can tell that the number of tourists is steadily increasing from 1995 to 2015.
+This _Total Number of Tourists in the World per Year_ plot shows the relationship between the year and the total number of tourists (outbound) and the average GDP of the whole world. We can tell that from 1995 to 2016, as the average GDP per capita is increasing (indicated by the bars getting lighter), so is the number of tourists.
