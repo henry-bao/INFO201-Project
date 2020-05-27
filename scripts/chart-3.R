@@ -13,19 +13,25 @@ library("ggplot2")
 tourists_vs_gdp <- read.csv("../data/tourists-vs-gdp.csv",
                             stringsAsFactors = FALSE)
 
-#Narrowing data down to "World" data 1995-2016
-world_tourists_vs_gdp <- tourists_vs_gdp %>%
-  filter(Entity == "World") %>%
-  slice(6:27) %>%
-  select(-Entity) %>%
-  select(-Code) %>%
-  select(-X)
+#make chart 3 function
+get_bar_graph <- function(df) {
+  #filter data to "world" data years 1995 to 2016
+  world_tourists_vs_gdp <- df %>%
+    filter(Entity == "World") %>%
+    slice(6:27) %>%
+    select(-Entity) %>%
+    select(-Code) %>%
+    select(-X)
+  
+  #create plot 
+  chart_3 <- ggplot(data = world_tourists_vs_gdp) +
+    geom_col(mapping = aes(x = Year, y = Tourists,
+                           fill = GDP.per.capita)) +
+    labs(title = "Total Number of Tourists in the World per Year",
+         fill = "Average GDP per Capita ($)")
+  
+  #return bar graph
+  chart_3
+  }
 
-#Creating plot 
-chart_3 <- ggplot(data = world_tourists_vs_gdp) +
-  geom_col(mapping = aes(x = Year, y = Tourists,
-                         fill = GDP.per.capita)) +
-  labs(title = "Total Number of Tourists in the World per Year",
-       fill = "Average GDP per Capita ($)")
 
-chart_3
