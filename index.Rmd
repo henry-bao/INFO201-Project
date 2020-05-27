@@ -3,43 +3,51 @@ title: "Tourists vs GDP Data Report"
 output: html_document
 ---
 ```{r setup, include = FALSE, warning = FALSE}
+library(dplyr)
+library(plotly)
+library(ggplot2)
+library(htmltools)
+library(knitr)
 source("./scripts/summarytable.R")
-<<<<<<< HEAD
-```
-## Introduction
-Tourism is a popular economic activity that has developed significantly over the years. It’s an activity that can bring benefit to a country's government and its local residents. Such activity is recognized in almost every nations in the world. Accordingly, for this group project our team is going analyse the correlation between a country's GDP and the number of outbound tourists each country has using the [Number of Tourists vs GDP Data-Set](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country).The data was collected through several avenues. The country prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers 1800s up to 2017.
-
-## Summary
-
-## Table
-
-`r world_table`
-
-## Charts
-=======
 source("./scripts/summaryinfo.R")
 source("./scripts/chart-1.R")
 source("./scripts/chart-2.R")
 source("./scripts/chart-3.R")
-df <- read.csv("./data/tourists-vs-gdp.csv")
-info_list <- get_summary_info(df)
-options(scipen = 999)
+df <- read.csv("./data/tourists-vs-gdp.csv", stringsAsFactors = FALSE)
 ```
 
 ## Introduction
 Tourism is a popular economic activity that has developed significantly over the years. It’s an activity that can bring benefits to a country's government and its local residents. Such activity is recognized in almost every nation in the world. Thus, it is important for us to know how can the wealth of a country can impact tourism. Accordingly, for this group project our team is going to analyze the correlation between a country's GDP and the number of outbound tourists each country has using the [Number of Tourists vs GDP Data-Set](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country). The data was collected through several avenues. The country's prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers from 1995 to 2016.
 
 ## Summary Information
-In this summary we will be analyzing the data-set stated above. There are a total of `r info_list$num_countries` countries that had been recorded into this data-set. `r info_list$highest_gdp_country` has the highest GDP per capita recorded on the list, with `r round(info_list$highest_gdp, digits = 2)` dollars achieved in `r info_list$highest_gdp_year`. In the same year, `r info_list$highest_gdp_country` has attracted `r info_list$highest_gdp_tourists` tourists. Furthermore, in `r info_list$most_tourists_in_world_year` the number hit a record high of `r info_list$most_tourists_in_world` tourists worldwide, also, the average GDP per capita for a country was also at its peak of `r round(info_list$most_tourists_in_world_gdp, digits = 2)` dollars.
+```{r echo = FALSE}
+info_list <- get_summary_info(df)
+options(scipen = 999)
+```
+In this summary we will be analyzing the data-set stated above. There are a total of `r info_list$num_countries` countries that had been recorded into this data-set. `r info_list$highest_gdp_country` has the highest GDP per Capita recorded on the list, with `r round(info_list$highest_gdp, digits = 2)` dollars achieved in `r info_list$highest_gdp_year`. In the same year, `r info_list$highest_gdp_country` has attracted `r info_list$highest_gdp_tourists` outbound tourists. Furthermore, in `r info_list$most_tourists_in_world_year` the number hit a record high of `r info_list$most_tourists_in_world` outbound tourists worldwide, also, the average GDP per Capita for a country was also at its peak of `r round(info_list$most_tourists_in_world_gdp, digits = 2)` dollars.
 
 ## Table of Aggregated Data
 `r get_summary_table(df)`
-The aggregated data table takes a closer look at the data-set. The table above is grouped by year and it is sorted from the late 90s to more recent times. Moreover, the table shows the average GDP per capita of the world and the number of tourists with its corresponding period. As shown on the table, as the average GDP per capita increases by each year, the number of tourists also increases. A reason for this could be as people continue to earn more money year by year, more individuals are willing to spend on traveling. 
+The aggregated data table takes a closer look at the data-set. The table above is grouped by year and it is sorted from the late 90s to more recent times. Moreover, the table shows the average GDP per Capita of the world and the number of outbound tourists with its corresponding period. As shown on the table, as the average GDP per Capita increases by each year, the number of outbound tourists also increases. A reason for this could be as people continue to earn more money year by year, more individuals are willing to spend on traveling. 
 
 ## Charts
 ### Chart 1
+```{r echo = FALSE, warning = FALSE}
+get_plot(df)
+```
+
+This plot shows the relationship between number of outbound tourists and prosperity of the home country from 2000 to 2016. Furthermore, the plot indicates that countries with higher GDP per Capita is not always the country that has the most tourist outbound.
 
 ### Chart 2
+```{r echo = FALSE, warning = FALSE}
+get_map(df)
+```
+
+This is an interactive world map that displays the GDP per Capita of each country through the gradient of blue shown on the map. This map also proves the interpretations above, take China for example, it has lower GDP per Capita than Canada, but has more tourists outbound.
 
 ### Chart 3
->>>>>>> origin/Henry
+```{r echo = FALSE, warning = FALSE}
+get_bar_graph(df)
+```
+
+From this _Total Number of Tourists in the World per Year_ plot we can tell that the number of tourists is steadily increasing from 1995 to 2015.
