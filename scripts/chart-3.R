@@ -27,7 +27,7 @@ get_bar_graph <- function(df) {
   chart_3 <- ggplot(data = world_tourists_vs_gdp) +
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
-    labs(title = "Total Number of Tourists in the World per Year",
+    labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",
          fill = "Average GDP per Capita ($)")
 
   #return bar graph
