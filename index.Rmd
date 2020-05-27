@@ -5,21 +5,22 @@ output: html_document
 ```{r setup, include = FALSE, warning = FALSE}
 source("./scripts/summarytable.R")
 source("./scripts/summaryinfo.R")
+source("./scripts/chart-1.R")
+source("./scripts/chart-2.R")
+source("./scripts/chart-3.R")
 df <- read.csv("./data/tourists-vs-gdp.csv")
+info_list <- get_summary_info(df)
+options(scipen = 999)
 ```
 
 ## Introduction
-Tourism is a popular economic activity that has developed significantly over the years. It’s an activity that can bring benefits to a country's government and its local residents. Such activity is recognized in almost every nation in the world. Accordingly, for this group project our team is going to analyze the correlation between a country's GDP and the number of outbound tourists each country has using the [Number of Tourists vs GDP Data-Set](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country).The data was collected through several avenues. The country's prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers from 1995 to 2016.
+Tourism is a popular economic activity that has developed significantly over the years. It’s an activity that can bring benefits to a country's government and its local residents. Such activity is recognized in almost every nation in the world. Thus, it is important for us to know how can the wealth of a country can impact tourism. Accordingly, for this group project our team is going to analyze the correlation between a country's GDP and the number of outbound tourists each country has using the [Number of Tourists vs GDP Data-Set](https://ourworldindata.org/grapher/number-of-tourists-outbound-vs-level-of-prosperity-of-the-home-country). The data was collected through several avenues. The country's prosperity was calculated based on the Global World Bank's World Development Indicators -- gross domestic product purchasing power parity (GDP PPP). This is a country's GDP converted to international dollars. The number of outbound tourists was calculated based on data from the Global World Bank which measured the number of times a citizen made a departure from their country for non-commercial purposes. This data set covers from 1995 to 2016.
 
 ## Summary Information
-```{r, include = FALSE, warning = FALSE}
-info_list <- get_summary_info(df)
-```
-In this summary we will be analyzing the data-set above.`r info_list$num_countries`
-
+In this summary we will be analyzing the data-set stated above. There are a total of `r info_list$num_countries` countries that had been recorded into this data-set. `r info_list$highest_gdp_country` has the highest GDP per capita recorded on the list, with `r round(info_list$highest_gdp, digits = 2)` dollars achieved in `r info_list$highest_gdp_year`. In the same year, `r info_list$highest_gdp_country` has attracted `r info_list$highest_gdp_tourists` tourists. Furthermore, in `r info_list$most_tourists_in_world_year` the number hit a record high of `r info_list$most_tourists_in_world` tourists worldwide, also, the average GDP per capita for a country was also at its peak of `r round(info_list$most_tourists_in_world_gdp, digits = 2)` dollars.
 
 ## Table of Aggregated Data
-`r world_table`
+`r get_summary_table(df)`
 The aggregated data table takes a closer look at the data-set. The table above is grouped by year and it is sorted from the late 90s to more recent times. Moreover, the table shows the average GDP per capita of the world and the number of tourists with its corresponding period. As shown on the table, as the average GDP per capita increases by each year, the number of tourists also increases. A reason for this could be as people continue to earn more money year by year, more individuals are willing to spend on traveling. 
 
 ## Charts

@@ -1,33 +1,19 @@
+#Chart 2
+## This chart attempts to display a map to understand GDP per capita
+## and number of tourists around the globe specifically in 2016.
+
+#Load libraries
 library(dplyr)
 library(leaflet)
 library(htmltools)
 library(plotly)
-df <- read.csv("../data/tourists-vs-gdp.csv", stringsAsFactors = FALSE)
 
-# Interactive Map
-
-df$info <- paste0("Entity ", df$Entity, "<br/> ",
-                  "Year ", df$Year, "<br/> ",
-                  "GDP per capita ", df$GDP.per.capita, "<br/> ",
-                  "Tourists ", df$Tourists) 
-
-map_coloring <- colorFactor(topo.colors(3), df$Tourists)
-
-interactive_map <- leaflet(data = df) %>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addCircleMarkers(
-    clusterOptions = markerClusterOptions(),
-    stroke = FALSE,      
-    color = map_coloring(df$Tourists),
-    label = ~lapply(info, HTML))
-
-interactive_map
-
-
+#Load data
+tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv", stringsAsFactors = FALSE)
 
 #plotly map
 #narrow data frame to 2016
-df_2016 <- df %>%
+tourists_vs_gdp_2016 <- tourists_vs_gdp %>%
   filter(Year == "2016")
 
 # light grey boundaries
@@ -41,19 +27,17 @@ g <- list(
 )
 
 #hover text
-hover_text <- paste("Country:", df_2016$Entity, '<br>',
-                    "Tourists:", df_2016$Tourists)
+hover_text <- paste("Country:", tourists_vs_gdp_2016$Entity, '<br>',
+                    "Tourists:", tourists_vs_gdp_2016$Tourists)
 
 #map
-chloropleth_map <- plot_geo(df_2016) %>%
+chloropleth_map <- plot_geo(tourists_vs_gdp_2016) %>%
   add_trace(
     z = ~GDP.per.capita, color = ~GDP.per.capita, colors = 'Blues',
     text = hover_text, locations = ~Code, marker = list(line = l)
-    ) %>%
+  ) %>%
   colorbar(title = 'GDP per capita', tickprefix = '$') %>%
   layout(title = '2016 Global GDP & Number of Tourists',
          geo = g)
 
 chloropleth_map
-
-
