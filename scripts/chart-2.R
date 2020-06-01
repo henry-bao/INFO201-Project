@@ -31,7 +31,7 @@ get_map <- function(df) {
   #hover text
   hover_text <- paste("Country:",
                       tourists_vs_gdp_2016$Entity, "<br>",
-                      " GDP per capita:",
+                      "GDP per capita:",
                       round(tourists_vs_gdp_2016$GDP.per.capita, digits = 2),
                       "<br>", "Tourists Outbound:",
                       tourists_vs_gdp_2016$Tourists)
