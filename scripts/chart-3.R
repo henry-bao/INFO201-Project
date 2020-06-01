@@ -8,10 +8,11 @@
 #Load libraries
 library("dplyr")
 library("ggplot2")
+library("plotly")
 
 #Load data
 df <- read.csv("./data/tourists-vs-gdp.csv",
-                            stringsAsFactors = FALSE)
+               stringsAsFactors = FALSE)
 
 #make chart 3 function
 get_bar_graph <- function(df) {
@@ -22,14 +23,14 @@ get_bar_graph <- function(df) {
     select(-Entity) %>%
     select(-Code) %>%
     select(-X)
-
+  
   #create plot
   chart_3 <- ggplot(data = world_tourists_vs_gdp) +
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
-    labs(title = "Total Number of Tourists in the World per Year",
+    labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",
          fill = "Average GDP per Capita ($)")
-
+  
   #return bar graph
-  chart_3
-  }
+  ggplotly(chart_3)
+}

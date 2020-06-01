@@ -29,17 +29,19 @@ get_map <- function(df) {
     )
 
   #hover text
-  hover_text <- paste(" GDP per capita:",
-                      round(tourists_vs_gdp_2016$GDP.per.capita, digits = 2),
-                      "<br>", "Country:",
+  hover_text <- paste("Country:",
                       tourists_vs_gdp_2016$Entity, "<br>",
-                    "Tourists Outbound:", tourists_vs_gdp_2016$Tourists)
+                      " GDP per capita:",
+                      round(tourists_vs_gdp_2016$GDP.per.capita, digits = 2),
+                      "<br>", "Tourists Outbound:",
+                      tourists_vs_gdp_2016$Tourists)
 
   #create map
   chloropleth_map <- plot_geo(tourists_vs_gdp_2016) %>%
     add_trace(
-      z = ~GDP.per.capita, color = ~GDP.per.capita, colors = "Blues",
-      text = hover_text, locations = ~Code, marker = list(line = l)
+      hoverinfo = "text", z = ~GDP.per.capita, color = ~GDP.per.capita,
+      colors = "Blues", text = hover_text, locations = ~Code,
+      marker = list(line = l)
       ) %>%
     colorbar(title = "GDP per capita", tickprefix = "$") %>%
     layout(title = "2016 Global GDP & Number of Tourists",
