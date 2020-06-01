@@ -23,14 +23,15 @@ get_bar_graph <- function(df) {
     select(-Entity) %>%
     select(-Code) %>%
     select(-X)
-  
+
   #create plot
   chart_3 <- ggplot(data = world_tourists_vs_gdp) +
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
     labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",
          fill = "Average GDP per Capita ($)")
-  
+
   #return bar graph
   ggplotly(chart_3)
 }
+

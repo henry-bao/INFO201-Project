@@ -43,11 +43,11 @@ This plot shows the relationship between number of outbound tourists and prosper
 get_map(df)
 ```
 
-This is an interactive world map that displays the GDP per Capita of each country through the gradient of blue shown on the map. This map also proves the interpretations above, take China for example, it has lower GDP per Capita than Canada, but has more tourists outbound.
+This is an interactive world map that displays the GDP per Capita of each country through the gradient of blue shown on the map. When hovering over a country, it provides more exact information (specific GDP per Capita, country name, and number of tourists outbound from that country). This map also proves the interpretations above, take China for example, it has lower GDP per Capita than Canada, but has more tourists outbound.
 
 ### Chart 3
 ```{r echo = FALSE, warning = FALSE}
 get_bar_graph(df)
 ```
 
-From this _Total Number of Tourists in the World per Year_ plot we can tell that the number of tourists is steadily increasing from 1995 to 2015.
+This bar graph shows the relationship between the year and the total number of tourists (outbound) and the average GDP of the whole world. We can tell that from 1995 to 2016, as the average GDP per capita is increasing (indicated by the bars getting lighter), so is the number of tourists.
