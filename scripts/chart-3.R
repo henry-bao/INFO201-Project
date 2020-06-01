@@ -34,4 +34,3 @@ get_bar_graph <- function(df) {
   #return bar graph
   ggplotly(chart_3)
 }
-
