@@ -71,9 +71,35 @@ chart_1_page <- tabPanel(
   )
 )
 
+chart_2_page <- tabPanel(
+  "GDP & Tourism Map",
+  titlePanel("GDP & Tourism Map"),
+  
+  # Sidebar with a selectInput for the population variable 
+  sidebarLayout(
+    sidebarPanel(
+      # Radio buttons for the color of the graph
+      radioButtons(
+        inputId = "radio_data",
+        label = "Display Data By",
+        choiceValues = c("GDP.per.capita", "Tourists"),
+        choiceNames = c("GDP Per Capita", "Tourists"),
+        selected = "GDP.per.capita"
+      )
+    ),
+    
+    # Display bar graph in main panel
+    mainPanel(
+      h3("2016 Global GDP $ Number of Tourists Outbound"),
+      p(paste("to be filled")),
+      plotlyOutput("map")
+    )
+  )
+)
+
 ui <- navbarPage(
   "Tourism vs GDP",
   theme = shinytheme("journal"),
   about,
-  chart_1_page
-)
+  chart_1_page,
+  chart_2_page)
