@@ -7,10 +7,6 @@ library(dplyr)
 library(htmltools)
 library(plotly)
 
-#Load data
-tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
-                            stringsAsFactors = FALSE)
-
 #create plotly map function
 get_map <- function(df) {
 

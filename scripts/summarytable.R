@@ -4,10 +4,6 @@
 library("dplyr")
 library("knitr")
 
-#Load data frame
-tourists_vs_gdp <- read.csv("./data/tourists-vs-gdp.csv",
-                            stringsAsFactors = FALSE)
-
 #Function that returns dataset
 get_summary_table <- function(df) {
   #Narrow data frame to just "world" data 1995 to 2016

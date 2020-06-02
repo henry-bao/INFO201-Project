@@ -10,10 +10,6 @@ library("dplyr")
 library("ggplot2")
 library("plotly")
 
-#Load data
-df <- read.csv("./data/tourists-vs-gdp.csv",
-               stringsAsFactors = FALSE)
-
 #make chart 3 function
 get_bar_graph <- function(df) {
   #filter data to "world" data years 1995 to 2016
