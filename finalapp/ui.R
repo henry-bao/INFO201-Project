@@ -64,9 +64,11 @@ chart_1_page <- tabPanel(
         from 1995 to 2016. "),
       plotlyOutput("plot"),
       h3("Findings"),
-      p("The plot indicates that countries with higher GDP
-        per Capita is not always the country that has the
-        most tourist outbound.")
+      p("- For most countries, their GDP per Capita will increase on
+        a yearly basis."),
+      p("- The plot also indicates that for the majority of countries, 
+        as GDP per Capita increases the number of outbound tourists
+        also increases.")
     )
   )
 )
