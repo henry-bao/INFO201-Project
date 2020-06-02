@@ -14,10 +14,9 @@ about <- tabPanel(
       h2("About the data"),
       tags$a(hrep = "https://ourworldindata.org/grapher
       /number-of-tourists-outbound-vs-level-of-prosperity
-      -of-the-home-country","Number of Outbound Tourists
+      -of-the-home-country", "Number of Outbound Tourists
       vs GDP Data-Set"),
-      p("The
-        data was collected through several avenues. The
+      p("The data was collected through several avenues. The
         country's prosperity was calculated based on the
         Global World Bank's World Development Indicators
         -- gross domestic product purchasing power parity
@@ -39,7 +38,7 @@ about <- tabPanel(
         Thus, it is important for us to know how can the wealth
         of a country can impact tourism. Accordingly, for this
         group project our team is going to analyze the correlation
-        between a country's GDP and the number of each country's 
+        between a country's GDP and the number of each country's
         outbound tourists.")
     )
   )
