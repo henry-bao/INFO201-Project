@@ -44,8 +44,21 @@ about <- tabPanel(
   )
 )
 
+chart_1_page <- tabPanel(
+  "Country vs Year Visualization",
+  titlePanel("Country vs Year Visualization"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("Country", "Select Country", unique(df$Entity),
+                   selected = "United States"),
+    ),
+    mainPanel(
+    )
+  )
+)
 
 ui <- navbarPage(
   "Tourism vs GDP",
-  about
+  about,
+  chart_1_page
 )
