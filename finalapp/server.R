@@ -7,20 +7,27 @@
 #    http://shiny.rstudio.com/
 #
 
+# server.R
+library(dplyr)
 library(shiny)
+library(plotly)
 
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+# Read in data
+source('./scripts/build_map.R')
+df <- read.csv('./data/electoral_college.csv', stringsAsFactors = FALSE)
+state_codes <- read.csv('./data/state_codes.csv', stringsAsFactors = FALSE)
 
-    output$distPlot <- renderPlot({
+# Join together state.codes and df
+joined_data <- left_join(df, state_codes, by="state")
 
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+# Compute the electoral votes per 100K people in each state
+joined_data <- joined_data %>% mutate(ratio = votes/population * 100000)
 
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-
-    })
-
-})
+# Define server function
+server <- function(input, output) { 
+  
+  # Render a plotly object that returns your map
+  output$map <- renderPlotly({ 
+      return(build_map(joined_data, input$mapvar))
+  })
+}
