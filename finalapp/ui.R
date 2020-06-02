@@ -53,15 +53,15 @@ chart_1_page <- tabPanel(
   titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("Country", "Select Country", choices = unique(df$Entity),
-                   selected = "United States"),
+      selectInput("Country", "Select Country",
+                  choices = unique(df$Entity[!is.na(df$Tourists)]),
+                  selected = "United States")
     ),
     mainPanel(
       p("This plot shows the relationship between number of
         outbound tourists and prosperity of the home country
         from 1995 to 2016. "),
-      plotlyOutput("plot"),
-      p("Some country might return an error due to missing data.")
+      plotlyOutput("plot")
     )
   )
 )
