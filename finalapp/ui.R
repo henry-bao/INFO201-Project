@@ -45,8 +45,8 @@ about <- tabPanel(
 )
 
 chart_1_page <- tabPanel(
-  "Country vs Year Visualization",
-  titlePanel("Country vs Year Visualization"),
+  "Country vs Tourism Visualization",
+  titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
       selectInput("Country", "Select Country", unique(df$Entity),
