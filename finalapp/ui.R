@@ -5,6 +5,7 @@ library("shiny")
 library("dplyr")
 library("ggplot2")
 library("plotly")
+library("shinythemes")
 
 # Load data frame
 df <- read.csv("../data/tourists-vs-gdp.csv",
@@ -16,10 +17,9 @@ about <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("About the data"),
-      tags$a(hrep = "https://ourworldindata.org/grapher
-      /number-of-tourists-outbound-vs-level-of-prosperity
-      -of-the-home-country", "Number of Outbound Tourists
-      vs GDP Data-Set"),
+      tags$a(
+        hrep = "https://bit.ly/3gP3Rg4",
+        "Number of Outbound Tourists vs GDP Data-Set"),
       p("The data was collected through several avenues. The
         country's prosperity was calculated based on the
         Global World Bank's World Development Indicators
@@ -73,6 +73,7 @@ chart_1_page <- tabPanel(
 
 ui <- navbarPage(
   "Tourism vs GDP",
+  theme = shinytheme("journal"),
   about,
   chart_1_page
 )
