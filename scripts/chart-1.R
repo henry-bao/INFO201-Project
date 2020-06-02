@@ -29,7 +29,7 @@ get_plot <- function(df) {
     labs(
       x = "GDP per capita", y = "Tourists Outbound", color = "Year") +
     scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) +
-    scale_color_gradient(high = "red", low = "tan")
+    scale_color_gradient(high = "red", low = "#F9E79F")
 
   #Making the plot interactive
   ggplotly(chart_1)
