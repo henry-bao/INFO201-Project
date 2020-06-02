@@ -32,6 +32,7 @@ about <- tabPanel(
         This data set covers from 1995 to 2016.")
     ),
     mainPanel(
+      width = 6,
       tags$img(src = "tourism.png"),
       h2("Why Tourism ?"),
       p("Tourism is a popular economic activity that has
