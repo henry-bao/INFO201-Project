@@ -1,4 +1,4 @@
-# server.R
+# Server.R
 
 # Load libraries
 library(dplyr)

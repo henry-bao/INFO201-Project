@@ -1,4 +1,4 @@
-# ui.R
+# UI.R
 
 # Load libraries
 library("shiny")
