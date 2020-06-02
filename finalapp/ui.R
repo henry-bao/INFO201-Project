@@ -17,9 +17,6 @@ about <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("About the data"),
-      tags$a(
-        hrep = "https://bit.ly/3gP3Rg4",
-        "Number of Outbound Tourists vs GDP Data-Set"),
       p("The data was collected through several avenues. The
         country's prosperity was calculated based on the
         Global World Bank's World Development Indicators
@@ -29,7 +26,9 @@ about <- tabPanel(
         was calculated based on data from the Global World Bank
         which measured the number of times a citizen made a
         departure from their country for non-commercial purposes.
-        This data set covers from 1995 to 2016.")
+        This data set covers from 1995 to 2016."),
+      actionButton(inputId='ab1', label="Learn More",
+                   onclick ="window.open('https://bit.ly/3gP3Rg4', '_blank')")
     ),
     mainPanel(
       width = 6,
