@@ -4,6 +4,5 @@ library(shiny)
 library(plotly)
 
 # Define server function
-server <- function(input, output)
-  { 
+server <- function(input, output) {
 }
