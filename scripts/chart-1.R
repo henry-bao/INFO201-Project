@@ -1,7 +1,7 @@
 #Chart 1
 ## This chart attempts to display an interactive plot of all
 ## countries/entities with their average GDP per capita and
-## Tourists from 2000 to 2016.
+## Tourists from 1995 to 2016.
 
 #Load libraries
 library("dplyr")
@@ -28,7 +28,8 @@ get_plot <- function(df) {
                ) +
     labs(
       x = "GDP per capita", y = "Tourists Outbound", color = "Year") +
-    scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
+    scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) +
+    scale_color_gradient(high = "yellow", low = "red")
 
   #Making the plot interactive
   ggplotly(chart_1)
