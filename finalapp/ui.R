@@ -37,16 +37,16 @@ about <- tabPanel(
       p("Tourism is a popular economic activity that has
         developed significantly over the years. Many people all
         over the world enjoy travelling as a way to get away from
-        reality like work, to explore new cultures and foods, or 
-        to simply spend quality time with their loved ones. It is 
+        reality like work, to explore new cultures and foods, or
+        to simply spend quality time with their loved ones. It is
         also an activity that can bring benefits to a country's
         government and its local residents. Such activity
         is recognized in almost every nation in the world.
-        Thus, it is important for us to know how the wealth of 
-        each country, and specifically a country's monetary value 
-        of finished goods and services they produce, can impact 
-        tourism. Accordingly, for this group project our team is 
-        going to analyze the correlation between a country's GDP 
+        Thus, it is important for us to know how the wealth of
+        each country, and specifically a country's monetary value
+        of finished goods and services they produce, can impact
+        tourism. Accordingly, for this group project our team is
+        going to analyze the correlation between a country's GDP
         and the number of each country's outbound tourists.")
     )
   )
@@ -57,7 +57,7 @@ chart_1_page <- tabPanel(
   titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("choose_country_plot", "Select Country",
+      selectInput("choose_country_plot", "Select Location",
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
     ),
@@ -70,7 +70,7 @@ chart_1_page <- tabPanel(
       h3("Findings"),
       p("- For most countries, their GDP per Capita will increase on
         a yearly basis."),
-      p("- The plot also indicates that for the majority of countries, 
+      p("- The plot also indicates that for the majority of countries,
         as GDP per Capita increases the number of outbound tourists
         also increases.")
     )
@@ -80,10 +80,10 @@ chart_1_page <- tabPanel(
 chart_2_page <- tabPanel(
   "GDP & Tourism Map",
   titlePanel("GDP & Tourism Map"),
-  
-  # Sidebar with a selectInput for the population variable 
+
+  # Sidebar with a selectInput for the population variable
   sidebarLayout(
-    
+
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
@@ -94,7 +94,7 @@ chart_2_page <- tabPanel(
         selected = "GDP.per.capita"
       )
     ),
-    
+
     # Display bar graph in main panel
     mainPanel(
       h3("2016 Global GDP $ Number of Tourists Outbound"),
@@ -110,7 +110,7 @@ chart_3_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
-                  label = "Select Country (or World)",
+                  label = "Select Location",
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
     ),

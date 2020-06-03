@@ -47,7 +47,7 @@ server <- function(input, output) {
   output$plot <- renderPlotly({
     get_plot(df %>% filter(Entity == input$choose_country_plot))
   })
-  
+
   ##Render map
   output$map <- renderPlotly(
     #map
