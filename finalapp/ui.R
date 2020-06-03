@@ -33,17 +33,21 @@ about <- tabPanel(
     mainPanel(
       width = 6,
       tags$img(src = "tourism.png", width = 740, height = 380),
-      h2("Why Tourism ?"),
+      h2("Why Tourism?"),
       p("Tourism is a popular economic activity that has
-        developed significantly over the years. It's an
-        activity that can bring benefits to a country's
+        developed significantly over the years. Many people all
+        over the world enjoy travelling as a way to get away from
+        reality like work, to explore new cultures and foods, or 
+        to simply spend quality time with their loved ones. It is 
+        also an activity that can bring benefits to a country's
         government and its local residents. Such activity
         is recognized in almost every nation in the world.
-        Thus, it is important for us to know how can the wealth
-        of a country can impact tourism. Accordingly, for this
-        group project our team is going to analyze the correlation
-        between a country's GDP and the number of each country's
-        outbound tourists.")
+        Thus, it is important for us to know how the wealth of 
+        each country, and specifically a country's monetary value 
+        of finished goods and services they produce, can impact 
+        tourism. Accordingly, for this group project our team is 
+        going to analyze the correlation between a country's GDP 
+        and the number of each country's outbound tourists.")
     )
   )
 )
