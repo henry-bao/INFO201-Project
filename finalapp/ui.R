@@ -65,13 +65,22 @@ about <- tabPanel(
         to simply spend quality time with their loved ones. It is
         also an activity that can bring benefits to a country's
         government and its local residents. Such activity
-        is recognized in almost every nation in the world.
-        Thus, it is important for us to know how the wealth of
+        is recognized in almost every nation in the world."),
+      h3("What's GDP and what does it have to do with Tourism?"),
+      p("GDP stands for Gross Domestic Product. GDP measures 
+        the value of economic activity within a country. 
+        It is important for us to know how the wealth of
         each country, and specifically a country's monetary value
         of finished goods and services they produce, can impact
-        tourism. Accordingly, for this group project our team is
+        tourism. Therefore, for this group project our team is
         going to analyze the correlation between a country's GDP
-        and the number of each country's outbound tourists.")
+        and the number of each country's outbound tourists."),
+      h3("Questions We Hope to Answer: "),
+      p("1) Does a country's GDP per Capita increrase on a 
+        yearly basis?"),
+      p("2) Do outbound tourists per country increase when the 
+        GDP per capita increases?"),
+      p("3) ")
     )
   )
 )
