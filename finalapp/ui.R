@@ -57,7 +57,8 @@ chart_1_page <- tabPanel(
   titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("choose_country_plot", "Select Location",
+      selectInput(inputId = "choose_country_plot",
+                  label = h4("Select Location"),
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
     ),
@@ -87,8 +88,8 @@ chart_2_page <- tabPanel(
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
-        "radio_data",
-        "Display Data By",
+        inputId = "radio_data",
+        label = h4("Display Data By"),
         choiceNames = c("GDP Per Capita", "Tourists"),
         choiceValues = c("GDP.per.capita", "Tourists"),
         selected = "GDP.per.capita"
@@ -110,7 +111,7 @@ chart_3_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
-                  label = "Select Location",
+                  label = h4("Select Location"),
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
     ),
