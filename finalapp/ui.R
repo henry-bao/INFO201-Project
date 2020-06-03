@@ -63,7 +63,7 @@ chart_1_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
-      h3("Number of tourists vs GDP per capita (1995 to 2016)"),
+      h3("Number of tourists vs GDP per Capita (1995 - 2016)"),
       p("This plot shows the relationship between number of
         outbound tourists and prosperity of the home country
         from 1995 to 2016. "),
@@ -116,7 +116,7 @@ chart_3_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
-      h3("Total Tourists Outbound (1995-2016)"),
+      h3("Total Tourists Outbound (1995 - 2016)"),
       p("This plot shows the relationship between number of
         outbound tourists and prosperity of the home country
         from 1995 to 2016. "),
