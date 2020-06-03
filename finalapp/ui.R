@@ -37,7 +37,7 @@ about <- tabPanel(
   "About",
   sidebarLayout(
     sidebarPanel(
-      h2("About the data"),
+      h2("About the Data"),
       p("The data was collected through several avenues. The
         country's prosperity was calculated based on the
         Global World Bank's World Development Indicators
@@ -74,8 +74,8 @@ about <- tabPanel(
 )
 
 chart_1_page <- tabPanel(
-  "Country vs Tourism Visualization",
-  titlePanel("Country vs Tourism Visualization"),
+  "Country vs. Tourism Visualization",
+  titlePanel("Country vs. Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
@@ -88,7 +88,7 @@ chart_1_page <- tabPanel(
                   )
     ),
     mainPanel(
-      h3("Number of tourists vs GDP per Capita (1995 - 2016)"),
+      h3("Number of Tourists vs. GDP per Capita (1995 - 2016)"),
       p("This plot shows the relationship between number of
         outbound tourists and prosperity of the home country
         from 1995 to 2016. "),
@@ -131,8 +131,8 @@ chart_2_page <- tabPanel(
 )
 
 chart_3_page <- tabPanel(
-  "GDP vs Tourism Chart",
-  titlePanel("Country vs Tourism Visualization"),
+  "GDP vs. Tourism Chart",
+  titlePanel("GDP vs. Tourism Chart"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -157,11 +157,57 @@ chart_3_page <- tabPanel(
   )
 )
 
+
+# Conclusion page
+conclusion <- tabPanel(
+  "Conclusion",
+    sidebarLayout(
+      sidebarPanel(
+        tags$img(src = "tourists.jpg", width = 450),
+    ), mainPanel(
+      width = 6,
+      h1("Key Takeaways"),
+      h2("Takeaway 1"),
+      p("As demonstrated in 'Country vs Tourism Visualization', the GDP
+       per Capita will increase on a yearly basis for most countries.
+       For example, the GDP per capita in the United States increased
+       from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
+       implies that with time, countries will experience economic growth,
+       likely as a result from the expansion of globalization and
+       advancement of technology."),
+      h2("Takeaway 2"),
+      p("The 'Country vs Tourism Visualization' also indicates that 
+        as GDP per Capita increases, so does the number of outbound
+        tourists for the majority of countries. For example, when the
+        GDP per capita in China was $2564.07 in 1995, the number of
+        outbound tourists was 4,520,000. Later in 2016, the GDP per
+        capita was $14400.89 and the number of outbound tourists was
+        135,130,000. This insight suggests that as a country becomes
+        more properous (higher GDP), its citizens will have more
+        disposable funds to use for international travel."),
+      h2("Takeaway 3"),
+      p("The 'GDP vs Tourism Chart' indicates that an increase in
+        GDP per Capita does not always correlate with a country's
+        increase its number of outbound tourists. For example, when the
+        GDP per capita in Denmark was $45865.80 in 2008, the number of
+        outbound tourists was 6,347,000. The year after in 2009, the
+        GDP per capita decreased to $43,382.63, while the number of
+        outbound tourists increased to 7,037,000. This insight suggests
+        that while a country's GDP per capita can impact its number of
+        outbound tourists, it is not a directly proportional relationship.
+        Additionally, this suggests there are other factors outside the
+        scope of this data that impact a country's number of outbound
+        tourists (for example, weather and political climate).")
+    )
+  )
+)
+
+
 ui <- navbarPage(
   "Tourism vs GDP",
   theme = shinytheme("journal"),
   about,
   chart_1_page,
   chart_2_page,
-  chart_3_page
-  )
+  chart_3_page,
+  conclusion)
