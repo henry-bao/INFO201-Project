@@ -14,22 +14,22 @@ df <- read.csv("../data/tourists-vs-gdp.csv",
 t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
 
 # Get country names
-country <- t %>% 
-  select(1) %>% 
+country <- t %>%
+  select(1) %>%
   slice(1:21, 23:35, 40:44, 50:59, 61:63, 66:78, 83:85,
-        88:95, 97:104, 106, 108:116, 118:127, 130:149, 151:154, 156) %>% 
+        88:95, 97:104, 106, 108:116, 118:127, 130:149, 151:154, 156) %>%
   rename(c_names = unique.df.Entity..is.na.df.Tourists...)
 
 # Get region names
-region <- t %>% 
-  select(1) %>% 
-  slice(22, 37, 45:46, 80, 105, 128, 155) %>% 
+region <- t %>%
+  select(1) %>%
+  slice(22, 37, 45:46, 80, 105, 128, 155) %>%
   rename(r_names = unique.df.Entity..is.na.df.Tourists...)
 
 # Get income names
-income <- t %>% 
-  select(1) %>% 
-  slice(39, 48, 60, 82, 86:87, 96, 150) %>% 
+income <- t %>%
+  select(1) %>%
+  slice(39, 48, 60, 82, 86:87, 96, 150) %>%
   rename(inc_lvl = unique.df.Entity..is.na.df.Tourists...)
 
 # About page
@@ -176,7 +176,7 @@ conclusion <- tabPanel(
        likely as a result from the expansion of globalization and
        advancement of technology."),
       h2("Takeaway 2"),
-      p("The 'Country vs Tourism Visualization' also indicates that 
+      p("The 'Country vs Tourism Visualization' also indicates that
         as GDP per Capita increases, so does the number of outbound
         tourists for the majority of countries. For example, when the
         GDP per capita in China was $2564.07 in 1995, the number of
@@ -210,4 +210,5 @@ ui <- navbarPage(
   chart_1_page,
   chart_2_page,
   chart_3_page,
-  conclusion)
+  conclusion
+  )
