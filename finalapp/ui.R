@@ -8,7 +8,7 @@ library("plotly")
 library("shinythemes")
 
 # Load data frame
-df <- read.csv("../data/tourists-vs-gdp.csv",
+df <- read.csv("./data/tourists-vs-gdp.csv",
                stringsAsFactors = FALSE)
 
 # About page
@@ -101,9 +101,34 @@ chart_2_page <- tabPanel(
   )
 )
 
+chart_3_page <- tabPanel(
+  "GDP vs Tourism Chart",
+  titlePanel("Country vs Tourism Visualization"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(inputId = "choose_country",
+                  label = "Select Country (orWorld",
+                  choices = unique(df$Entity[!is.na(df$Tourists)]),
+                  selected = "United States")
+    ),
+    mainPanel(
+      h3("Total Tourists Outbound (1995-2016)"),
+      p("This plot shows the relationship between number of
+        outbound tourists and prosperity of the home country
+        from 1995 to 2016. "),
+      plotlyOutput("bar_graph"),
+      h3("Findings"),
+      p("The plot indicates that countries with higher GDP
+        per Capita is not always the country that has the
+        most tourist outbound.")
+    )
+  )
+)
+
 ui <- navbarPage(
   "Tourism vs GDP",
   theme = shinytheme("journal"),
   about,
   chart_1_page,
-  chart_2_page)
+  chart_2_page,
+  chart_3_page)

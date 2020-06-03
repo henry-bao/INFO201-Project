@@ -50,7 +50,7 @@ server <- function(input, output) {
   
   ##Render map
   output$map <- renderPlotly(
-    #create map
+    #map
     plot_geo(tourists_vs_gdp_2016) %>%
       add_trace(
         z = ~input$radio_data, color = ~input$radio_data, colors = "Blues",
@@ -59,4 +59,18 @@ server <- function(input, output) {
       colorbar(title = input$radio_data) %>%
       layout(geo = g)
     )
+  
+  ##Render bar graph
+  output$bar_graph <- renderPlotly(
+    # plot
+    chart_3 <- ggplot(data = df %>%
+                        filter(Entity == input$choose_country) %>%
+                        slice(6:27) %>%
+                        select(-Entity) %>%
+                        select(-Code) %>%
+                        select(-X)) +
+      geom_col(mapping = aes(x = Year, y = Tourists,
+                             fill = GDP.per.capita)) +
+      labs(fill = "Average GDP per Capita ($)")
+  )
 }
