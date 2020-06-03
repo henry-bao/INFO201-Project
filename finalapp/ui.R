@@ -57,7 +57,7 @@ chart_1_page <- tabPanel(
   titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("Country", "Select Country",
+      selectInput("choose_country_plot", "Select Country",
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
     ),
@@ -109,7 +109,7 @@ chart_3_page <- tabPanel(
   titlePanel("Country vs Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
-      selectInput(inputId = "choose_country",
+      selectInput(inputId = "choose_country_bar",
                   label = "Select Country (or World)",
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
                   selected = "United States")
@@ -121,7 +121,7 @@ chart_3_page <- tabPanel(
         from 1995 to 2016. "),
       plotlyOutput("bar_graph"),
       h3("Findings"),
-      p("The plot indicates that countries with higher GDP
+      p("- The plot indicates that countries with higher GDP
         per Capita is not always the country that has the
         most tourist outbound.")
     )

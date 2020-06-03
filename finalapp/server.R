@@ -45,7 +45,7 @@ server <- function(input, output) {
 
   ##Render plot
   output$plot <- renderPlotly({
-    get_plot(df %>% filter(Entity == input$Country))
+    get_plot(df %>% filter(Entity == input$choose_country_plot))
   })
   
   ##Render map
@@ -62,6 +62,6 @@ server <- function(input, output) {
 
   ##Render bar graph
   output$bar_graph <- renderPlotly({
-    get_bar_graph(df %>% filter(Entity == input$choose_country))
+    get_bar_graph(df %>% filter(Entity == input$choose_country_bar))
   })
 }
