@@ -17,29 +17,6 @@ source("../scripts/chart-1.R")
 source("../scripts/chart-2.R")
 source("../scripts/chart-3.R")
 
-# Define variables for map
-## Filter data to 2016
-tourists_vs_gdp_2016 <- df %>%
-filter(Year == "2016")
-
-## Map light grey boundaries
-l <- list(color = toRGB("grey"), width = 0.5)
-
-## Specify map projection/options
-g <- list(
-  showframe = FALSE,
-  showcoastlines = FALSE,
-  projection = list(type = "Mercator")
-)
-
-## Map Hover text
-hover_text <- paste(" GDP per capita:",
-                    round(tourists_vs_gdp_2016$GDP.per.capita, digits = 2),
-                    "<br>", "Country:",
-                    tourists_vs_gdp_2016$Entity, "<br>",
-                    "Tourists Outbound:", tourists_vs_gdp_2016$Tourists)
-
-
 # Define server function
 server <- function(session, input, output) {
 
