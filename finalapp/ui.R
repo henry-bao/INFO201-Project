@@ -49,6 +49,8 @@ about <- tabPanel(
         which measured the number of times a citizen made a
         departure from their country for non-commercial purposes.
         This data set covers from 1995 to 2016."),
+      tags$img(src = "money.jpg", width = "100%"),
+      p(" "),
       actionButton(inputId = "ab1", label = "Learn More",
                    onclick = "window.open('https://bit.ly/3gP3Rg4', '_blank')")
     ),
@@ -126,7 +128,12 @@ chart_2_page <- tabPanel(
     # Display bar graph in main panel
     mainPanel(
       h3("2016 Global GDP & Number of Tourists Outbound"),
-      p(paste("to be filled")),
+      p("This chart attempts to display an interactive map 
+        to understand GDP per capita and number of tourists 
+        around the globe specifically in 2016. Using this 
+        interactive map, we are able to compare and contrast 
+        the difference in GDP per capita and number of tourists 
+        between each country in 2016."),
       plotlyOutput("map")
     )
   )
