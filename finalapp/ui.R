@@ -10,6 +10,27 @@ library("shinythemes")
 # Load data frame
 df <- read.csv("../data/tourists-vs-gdp.csv",
                stringsAsFactors = FALSE)
+# Get location names
+t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
+
+# Get country names
+country <- t %>% 
+  select(1) %>% 
+  slice(1:21, 23:35, 40:44, 50:59, 61:63, 66:78, 83:85,
+        88:95, 97:104, 106, 108:116, 118:127, 130:149, 151:154, 156) %>% 
+  rename(c_names = unique.df.Entity..is.na.df.Tourists...)
+
+# Get region names
+region <- t %>% 
+  select(1) %>% 
+  slice(22, 37, 45:46, 80, 105, 128, 155) %>% 
+  rename(r_names = unique.df.Entity..is.na.df.Tourists...)
+
+# Get income names
+income <- t %>% 
+  select(1) %>% 
+  slice(39, 48, 60, 82, 86:87, 96, 150) %>% 
+  rename(inc_lvl = unique.df.Entity..is.na.df.Tourists...)
 
 # About page
 about <- tabPanel(
@@ -59,8 +80,12 @@ chart_1_page <- tabPanel(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
                   label = h4("Select Location"),
-                  choices = unique(df$Entity[!is.na(df$Tourists)]),
-                  selected = "United States")
+                  choices = list(
+                    "Country" = country$c_names,
+                    "Region" = region$r_names,
+                    "Income Level" = income$inc_lvl),
+                  selected = "World"
+                  )
     ),
     mainPanel(
       h3("Number of tourists vs GDP per Capita (1995 - 2016)"),
@@ -112,7 +137,10 @@ chart_3_page <- tabPanel(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
                   label = h4("Select Location"),
-                  choices = unique(df$Entity[!is.na(df$Tourists)]),
+                    choices = list(
+                      "Country" = country$c_names,
+                      "Region" = region$r_names,
+                      "Income Level" = income$inc_lvl),
                   selected = "United States")
     ),
     mainPanel(

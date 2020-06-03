@@ -41,7 +41,7 @@ hover_text <- paste(" GDP per capita:",
 
 
 # Define server function
-server <- function(input, output) {
+server <- function(session, input, output) {
 
   ##Render plot
   output$plot <- renderPlotly({
