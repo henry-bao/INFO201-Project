@@ -82,10 +82,10 @@ chart_2_page <- tabPanel(
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
-        inputId = "radio_data",
-        label = "Display Data By",
-        choiceValues = c("GDP.per.capita", "Tourists"),
+        "radio_data",
+        "Display Data By",
         choiceNames = c("GDP Per Capita", "Tourists"),
+        choiceValues = c("GDP.per.capita", "Tourists"),
         selected = "GDP.per.capita"
       )
     ),
@@ -104,4 +104,5 @@ ui <- navbarPage(
   theme = shinytheme("journal"),
   about,
   chart_1_page,
-  chart_2_page)
+  chart_2_page
+  )
