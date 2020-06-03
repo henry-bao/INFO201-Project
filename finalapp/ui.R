@@ -53,7 +53,7 @@ about <- tabPanel(
     ),
     mainPanel(
       width = 6,
-      tags$img(src = "tourism.png", width = 740, height = 380),
+      tags$img(src = "tourism.png", width = "100%"),
       h2("Why Tourism?"),
       p("Tourism is a popular economic activity that has
         developed significantly over the years. Many people all
@@ -163,7 +163,7 @@ conclusion <- tabPanel(
   "Conclusion",
     sidebarLayout(
       sidebarPanel(
-        tags$img(src = "tourists.jpg", width = 450),
+        tags$img(src = "tourists.jpg", width = "100%"),
     ), mainPanel(
       width = 6,
       h1("Key Takeaways"),
