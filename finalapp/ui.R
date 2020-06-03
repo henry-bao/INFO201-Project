@@ -15,11 +15,10 @@ df <- read.csv("../data/tourists-vs-gdp.csv",
 t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
 
 # Get country names
-country <- t %>%
-  select(1) %>%
-  slice(1:21, 23:35, 40:44, 50:59, 61:63, 66:78, 83:85,
-        88:95, 97:104, 106, 108:116, 118:127, 130:149, 151:154, 156) %>%
-  rename(c_names = unique.df.Entity..is.na.df.Tourists...)
+country <- df %>%
+  filter(Year == 2000) %>% 
+  filter(Entity != "World") %>%
+  filter(Code != "")
 
 # Get region names
 region <- t %>%
@@ -93,7 +92,7 @@ chart_1_page <- tabPanel(
       selectInput(inputId = "choose_country_plot",
                   label = h4("Select Location"),
                   choices = list(
-                    "Country" = country$c_names,
+                    "Country" = country$Entity,
                     "Region" = region$r_names,
                     "Income Level" = income$inc_lvl),
                   selected = "United States")
@@ -159,7 +158,7 @@ chart_3_page <- tabPanel(
       selectInput(inputId = "choose_country_bar",
                   label = h4("Select Location"),
                   choices = list(
-                    "Country" = country$c_names,
+                    "Country" = country$Entity,
                     "Region" = region$r_names,
                     "Income Level" = income$inc_lvl),
                   selected = "World")
