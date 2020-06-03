@@ -118,7 +118,7 @@ chart_2_page <- tabPanel(
         inputId = "radio_data",
         label = h4("Display Data By"),
         choiceNames = c("GDP Per Capita", "Tourists"),
-        choiceValues = c("~GDP.per.capita", "~Tourists"),
+        choiceValues = c("GDP.per.capita", "Tourists"),
         selected = "GDP.per.capita"
       )
     ),

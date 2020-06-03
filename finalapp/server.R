@@ -49,17 +49,31 @@ server <- function(session, input, output) {
   })
 
   ##Render map
-  output$map <- renderPlotly(
-    #map
-    plot_geo(tourists_vs_gdp_2016) %>%
-      add_trace(
-        z = ~GDP.per.capita, color = ~GDP.per.capita,
-        colors = "Blues", text = hover_text,
-        locations = ~Code, marker = list(line = l)
-      ) %>%
-      colorbar(title = "GDP Per Capita") %>%
-      layout(geo = g)
+  output$map <- if (input$radio_data == "GDP.per.capita") {
+    renderPlotly(
+      #map
+      plot_geo(tourists_vs_gdp_2016) %>%
+        add_trace(
+          z = ~GDP.per.capita, color = ~GDP.per.capita,
+          colors = "Blues", text = hover_text,
+          locations = ~Code, marker = list(line = l)
+        ) %>%
+        colorbar(title = "GDP per capita ($)") %>%
+        layout(geo = g)
     )
+  } else {
+    renderPlotly(
+      #map
+      plot_geo(tourists_vs_gdp_2016) %>%
+        add_trace(
+          z = ~Tourists, color = ~Tourists,
+          colors = "Blues", text = hover_text,
+          locations = ~Code, marker = list(line = l)
+        ) %>%
+        colorbar(title = "Tourists") %>%
+        layout(geo = g)
+    )
+  }
 
   ##Render bar graph
   output$bar_graph <- renderPlotly({
