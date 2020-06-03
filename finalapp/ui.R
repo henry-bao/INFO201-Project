@@ -16,7 +16,7 @@ t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
 
 # Get country names
 country <- df %>%
-  filter(Year == 2000) %>% 
+  filter(Year == 2000) %>%
   filter(Entity != "World") %>%
   filter(Code != "")
 
@@ -66,8 +66,8 @@ about <- tabPanel(
         government and its local residents. Such activity
         is recognized in almost every nation in the world."),
       h3("What's GDP and what does it have to do with Tourism?"),
-      p("GDP stands for Gross Domestic Product. GDP measures 
-        the value of economic activity within a country. 
+      p("GDP stands for Gross Domestic Product. GDP measures
+        the value of economic activity within a country.
         It is important for us to know how the wealth of
         each country, and specifically a country's monetary value
         of finished goods and services they produce, can impact
@@ -75,9 +75,9 @@ about <- tabPanel(
         going to analyze the correlation between a country's GDP
         and the number of each country's outbound tourists."),
       h3("Questions We Hope to Answer: "),
-      p("1) Does a country's GDP per Capita increrase on a 
+      p("1) Does a country's GDP per Capita increrase on a
         yearly basis?"),
-      p("2) Do outbound tourists per country increase when the 
+      p("2) Do outbound tourists per country increase when the
         GDP per capita increases?"),
       p("3) ")
     )
@@ -99,13 +99,13 @@ chart_1_page <- tabPanel(
     ),
     mainPanel(
       h3("Number of Tourists vs. GDP per Capita (1995 - 2016)"),
-      p("This chart attempts to understand the relationship 
-        between the total number of tourists in the world 
-        per year and the average GDP per Capita. In this chart, 
-        we are able to understand that there is a huge increase 
-        in both number of tourists and average GDP per Capita 
-        in the world. This plot shows the relationship between 
-        number of outbound tourists and prosperity of the home 
+      p("This chart attempts to understand the relationship
+        between the total number of tourists in the world
+        per year and the average GDP per Capita. In this chart,
+        we are able to understand that there is a huge increase
+        in both number of tourists and average GDP per Capita
+        in the world. This plot shows the relationship between
+        number of outbound tourists and prosperity of the home
         country from 1995 to 2016. "),
       plotlyOutput("plot"),
       h3("Findings"),
@@ -121,10 +121,10 @@ chart_1_page <- tabPanel(
 chart_2_page <- tabPanel(
   "GDP & Tourism Map",
   titlePanel("GDP & Tourism Map"),
-  
+
   # Sidebar with a selectInput for the population variable
   sidebarLayout(
-    
+
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
@@ -135,15 +135,15 @@ chart_2_page <- tabPanel(
         selected = "GDP.per.capita"
       )
     ),
-    
+
     # Display bar graph in main panel
     mainPanel(
       h3("2015 Global GDP & Number of Tourists Outbound"),
-      p("This chart attempts to display an interactive map 
-        to understand GDP per capita and number of tourists 
-        around the globe specifically in 2015. Using this 
-        interactive map, we are able to compare and contrast 
-        the difference in GDP per capita and number of tourists 
+      p("This chart attempts to display an interactive map
+        to understand GDP per capita and number of tourists
+        around the globe specifically in 2015. Using this
+        interactive map, we are able to compare and contrast
+        the difference in GDP per capita and number of tourists
         between each country in 2015."),
       plotlyOutput("map")
     )
@@ -165,17 +165,17 @@ chart_3_page <- tabPanel(
     ),
     mainPanel(
       h3("Total Tourists Outbound (1995 - 2016)"),
-      p("This chart attempts to display an interactive plot of 
-        all countries/entities with their average GDP per capita 
-        and Tourists from 1995 to 2016. This plot shows the 
-        relationship between number of outbound tourists and 
+      p("This chart attempts to display an interactive plot of
+        all countries/entities with their average GDP per capita
+        and Tourists from 1995 to 2016. This plot shows the
+        relationship between number of outbound tourists and
         prosperity of the home country from 1995 to 2016. "),
       plotlyOutput("bar_graph"),
       h3("Findings"),
       p("- The plot indicates that countries with higher GDP
         per Capita is not always the country that has the
         most tourist outbound."),
-      p("- In general, all countries seem to have a higher 
+      p("- In general, all countries seem to have a higher
         GDP per Capita when they have a higher number of outbound
         tourists as the years go by.")
     )

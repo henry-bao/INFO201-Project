@@ -9,23 +9,23 @@ library(plotly)
 
 #create plotly map function
 get_map <- function(df, input) {
-  
+
   #narrow data frame to 2016
   tourists_vs_gdp_2015 <- df %>%
     filter(Year == "2015") %>%
     filter(Entity != "World") %>%
     filter(Code != "")
-  
+
   #map light grey boundaries
   l <- list(color = toRGB("grey"), width = 0.5)
-  
+
   #specify map projection/options
   g <- list(
     showframe = FALSE,
     showcoastlines = FALSE,
     projection = list(type = "Mercator")
   )
-  
+
   #hover text
   hover_text <- paste("Country:",
                       tourists_vs_gdp_2015$Entity, "<br>",
@@ -33,7 +33,7 @@ get_map <- function(df, input) {
                       round(tourists_vs_gdp_2015$GDP.per.capita, digits = 2),
                       "<br>", "Tourists Outbound:",
                       tourists_vs_gdp_2015$Tourists)
-  
+
   if (input == "GDP.per.capita") {
     #create map
     chloropleth_map <- plot_geo(tourists_vs_gdp_2015) %>%
@@ -44,7 +44,7 @@ get_map <- function(df, input) {
       ) %>%
       colorbar(title = "GDP per Capita", tickprefix = "$") %>%
       layout(geo = g)
-    
+  
     #return map
     chloropleth_map
   } else {
@@ -56,7 +56,7 @@ get_map <- function(df, input) {
       ) %>%
       colorbar(title = "Tourists") %>%
       layout(geo = g)
-    
+  
     #return map
     chloropleth_map
   }
