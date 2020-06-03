@@ -53,7 +53,7 @@ about <- tabPanel(
                    onclick = "window.open('https://bit.ly/3gP3Rg4', '_blank')")
     ),
     mainPanel(
-      width = 6,
+      width = 7,
       tags$img(src = "tourism.png", width = "100%"),
       h2("Why Tourism?"),
       p("Tourism is a popular economic activity that has
