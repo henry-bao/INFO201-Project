@@ -88,6 +88,7 @@ about <- tabPanel(
   )
 )
 
+# Page 1
 chart_1_page <- tabPanel(
   "Tourists vs. GDP Plot",
   titlePanel("Tourists vs. GDP Plot"),
@@ -122,13 +123,14 @@ chart_1_page <- tabPanel(
   )
 )
 
+# Page 2
 chart_2_page <- tabPanel(
   "GDP & Tourism Map",
   titlePanel("GDP & Tourism Map"),
-  
+
   # Sidebar with a selectInput for the population variable
   sidebarLayout(
-    
+
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
@@ -139,7 +141,7 @@ chart_2_page <- tabPanel(
         selected = "GDP.per.capita"
       )
     ),
-    
+
     # Display bar graph in main panel
     mainPanel(
       h3("GDP & Number of Outbound Tourists in 2015"),
@@ -154,6 +156,7 @@ chart_2_page <- tabPanel(
   )
 )
 
+# Page 3
 chart_3_page <- tabPanel(
   "Toursists in 1995 to 2015 Bar Chart",
   titlePanel("Toursists & GDP in 1995 to 2015 Chart"),
@@ -182,7 +185,6 @@ chart_3_page <- tabPanel(
     )
   )
 )
-
 
 # Conclusion page
 conclusion <- tabPanel(
@@ -247,20 +249,20 @@ fun_facts <- tabPanel(
       titlePanel("Fun Facts About Tourism"),
       p("1) 1/10 jobs are supported by the Tourism industry across
         the world."),
-      p("2) Amongst emerging travel hotspots, Osaka, Japan is the world's 
+      p("2) Amongst emerging travel hotspots, Osaka, Japan is the world's
         fastest growing destination."),
-      p("3) The word 'tourist' has been used since 1760 for individuals 
+      p("3) The word 'tourist' has been used since 1760 for individuals
         travelling for recreation."),
-      p("4) The pilot and co-pilot should eat different meals to prevent 
-        them from upsetting their stomachs at the same time during a 
+      p("4) The pilot and co-pilot should eat different meals to prevent
+        them from upsetting their stomachs at the same time during a
         flight."),
-      p("5) Statistically, a plane is actually the safest mode of 
+      p("5) Statistically, a plane is actually the safest mode of
         transport in the world"),
-      p("6) Vatican is the smallest country in the world, next being 
+      p("6) Vatican is the smallest country in the world, next being
         Monaco."),
-      p("7) Las Vegas has the largest number of hotel rooms in the 
+      p("7) Las Vegas has the largest number of hotel rooms in the
       world."),
-      p("8) Canada has over 2,000,000 lakes. It is more than the rest 
+      p("8) Canada has over 2,000,000 lakes. It is more than the rest
         of the world combined."),
       p("9) You feel jet lag worse when travelling from west to east."),
       p("10) You can find a free wine fountain in a small town in Italy.")
@@ -268,6 +270,7 @@ fun_facts <- tabPanel(
   )
 )
 
+# Define ui
 ui <- navbarPage(
   "Tourism vs. GDP",
   theme = shinytheme("journal"),
