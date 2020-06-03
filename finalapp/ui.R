@@ -168,8 +168,8 @@ chart_2_page <- tabPanel(
 
 # Page 3
 chart_3_page <- tabPanel(
-  "Toursists in 1995 to 2015 Bar Chart",
-  titlePanel("Toursists & GDP in 1995 to 2015 Chart"),
+  "Toursism vs GDP Bar Graph (1995-2016",
+  titlePanel("Toursists & GDP, 1995 to 2016"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
