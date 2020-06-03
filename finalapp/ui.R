@@ -197,15 +197,14 @@ conclusion <- tabPanel(
        likely as a result from the expansion of globalization and
        advancement of technology."),
       h2("Takeaway 2"),
-      p("The 'Country vs. Tourism Visualization' also indicates that 
-        as GDP per Capita increases, so does the number of outbound
-        tourists for the majority of countries. For example, when the
-        GDP per capita in China was $2564.07 in 1995, the number of
-        outbound tourists was 4,520,000. Later in 2016, the GDP per
-        capita was $14400.89 and the number of outbound tourists was
-        135,130,000. This insight suggests that as a country becomes
-        more properous (higher GDP), its citizens will have more
-        disposable funds to use for international travel."),
+      p("The 'Country vs. Tourism Visualization' also indicates that
+        the outbound tourism in most developed countries grows over time.
+        For example, the number of outbound tourists from South Korea
+        in 2000 was 5,508,000. Later in 2015, the number of outbound
+        tourists was 19,310,000. This insight suggests that as a
+        country develops over time, technology allows international
+        travel to become more accessible. Additionally, its
+        citizens will likely have more funds to use to travel."),
       h2("Takeaway 3"),
       p("The 'GDP vs. Tourism Chart' indicates that an increase in
         GDP per Capita does not always correlate with a country's
@@ -218,7 +217,7 @@ conclusion <- tabPanel(
         outbound tourists, it is not a directly proportional relationship.
         Additionally, this suggests there are other factors outside the
         scope of this data that impact a country's number of outbound
-        tourists (for example, weather and political climate).")
+        tourists (for example, weather and political climate)."),
     )
   )
 )
