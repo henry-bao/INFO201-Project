@@ -114,10 +114,9 @@ chart_1_page <- tabPanel(
       plotlyOutput("plot"),
       h3("Findings"),
       p("- For most countries, their GDP per Capita increased on
-        a yearly basis."),
-      p("- The plot also indicates that for the majority of countries,
-        as GDP per Capita increases the number of outbound tourists
-        also increases.")
+        a yearly basis from 1995 to 2016."),
+      p("- Overall, for the majority of countries, as GDP per Capita
+        increases the number of outbound tourists also increases.")
     )
   )
 )
