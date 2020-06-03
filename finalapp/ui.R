@@ -127,13 +127,13 @@ chart_2_page <- tabPanel(
     
     # Display bar graph in main panel
     mainPanel(
-      h3("2016 Global GDP & Number of Tourists Outbound"),
+      h3("2015 Global GDP & Number of Tourists Outbound"),
       p("This chart attempts to display an interactive map 
         to understand GDP per capita and number of tourists 
-        around the globe specifically in 2016. Using this 
+        around the globe specifically in 2015. Using this 
         interactive map, we are able to compare and contrast 
         the difference in GDP per capita and number of tourists 
-        between each country in 2016."),
+        between each country in 2015."),
       plotlyOutput("map")
     )
   )
