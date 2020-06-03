@@ -13,15 +13,13 @@ library("plotly")
 #make chart 3 function
 get_bar_graph <- function(df) {
   #filter data to "world" data years 1995 to 2016
-  world_tourists_vs_gdp <- df %>%
-    filter(Entity == "World") %>%
-    slice(6:27) %>%
+  country_tourists_vs_gdp <- df %>%
     select(-Entity) %>%
     select(-Code) %>%
     select(-X)
 
   #create plot
-  chart_3 <- ggplot(data = world_tourists_vs_gdp) +
+  chart_3 <- ggplot(data = country_tourists_vs_gdp) +
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
     labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",

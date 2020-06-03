@@ -50,7 +50,7 @@ server <- function(input, output) {
   
   ##Render map
   output$map <- renderPlotly(
-    #create map
+    #map
     plot_geo(tourists_vs_gdp_2016) %>%
       add_trace(
         z = ~input$radio_data, color = ~input$radio_data, colors = "Blues",
@@ -59,4 +59,9 @@ server <- function(input, output) {
       colorbar(title = input$radio_data) %>%
       layout(geo = g)
     )
+
+  ##Render bar graph
+  output$bar_graph <- renderPlotly({
+    get_bar_graph(df %>% filter(Entity == input$choose_country))
+  })
 }
