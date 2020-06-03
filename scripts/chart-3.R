@@ -24,7 +24,8 @@ get_bar_graph <- function(df) {
                            fill = GDP.per.capita)) +
     labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",
          fill = "Average GDP per Capita ($)") +
-    scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
+    scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) +
+    scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
 
   #return bar graph
   ggplotly(chart_3)
