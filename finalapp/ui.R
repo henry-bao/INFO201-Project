@@ -16,7 +16,7 @@ t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
 
 # Get country names
 country <- df %>%
-  filter(Year == 2000) %>%
+  filter(Year == 2000) %>% 
   filter(Entity != "World") %>%
   filter(Entity %in% Entity[!is.na(Tourists)]) %>%
   filter(Code != "")
@@ -51,9 +51,7 @@ about <- tabPanel(
         This data set covers from 1995 to 2016."),
       tags$img(src = "money.jpg", width = "100%"),
       p(" "),
-      actionButton(inputId = "ab1",
-                   label = "Learn More",
-                   class = "btn-primary",
+      actionButton(inputId = "ab1", label = "Learn More",
                    onclick = "window.open('https://bit.ly/3gP3Rg4', '_blank')")
     ),
     mainPanel(
@@ -69,8 +67,8 @@ about <- tabPanel(
         government and its local residents. Such activity
         is recognized in almost every nation in the world."),
       h3("What's GDP and what does it have to do with Tourism?"),
-      p("GDP stands for Gross Domestic Product. GDP measures
-        the value of economic activity within a country.
+      p("GDP stands for Gross Domestic Product. GDP measures 
+        the value of economic activity within a country. 
         It is important for us to know how the wealth of
         each country, and specifically a country's monetary value
         of finished goods and services they produce, can impact
@@ -78,18 +76,19 @@ about <- tabPanel(
         going to analyze the correlation between a country's GDP
         and the number of each country's outbound tourists."),
       h3("Questions We Hope to Answer: "),
-      p("1) Does a country's GDP per Capita increrase on a
+      p("1) Does a country's GDP per Capita increase on a 
         yearly basis?"),
-      p("2) Do outbound tourists per country increase when the
+      p("2) Do outbound tourists per country increase when the 
         GDP per capita increases?"),
-      p("3) ")
+      p("3) Do more developed countries with better economy per year
+        increase tourism over time?")
     )
   )
 )
 
 chart_1_page <- tabPanel(
-  "Country vs. Tourism Visualization",
-  titlePanel("Country vs. Tourism Visualization"),
+  "Tourists vs. GDP Plot",
+  titlePanel("Tourists vs. GDP Plot"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
@@ -101,14 +100,14 @@ chart_1_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
-      h3("Number of Tourists vs. GDP per Capita (1995 - 2016)"),
-      p("This chart attempts to understand the relationship
-        between the total number of tourists in the world
-        per year and the average GDP per Capita. In this chart,
-        we are able to understand that there is a huge increase
-        in both number of tourists and average GDP per Capita
-        in the world. This plot shows the relationship between
-        number of outbound tourists and prosperity of the home
+      h3("Number of Outbound Tourists vs. GDP per Capita"),
+      p("This chart attempts to understand the relationship 
+        between the total number of tourists in the world 
+        per year and the average GDP per Capita. In this chart, 
+        we are able to understand that there is a huge increase 
+        in both number of tourists and average GDP per Capita 
+        in the world. This plot shows the relationship between 
+        number of outbound tourists and prosperity of the home 
         country from 1995 to 2016. "),
       plotlyOutput("plot"),
       h3("Findings"),
@@ -124,10 +123,10 @@ chart_1_page <- tabPanel(
 chart_2_page <- tabPanel(
   "GDP & Tourism Map",
   titlePanel("GDP & Tourism Map"),
-
+  
   # Sidebar with a selectInput for the population variable
   sidebarLayout(
-
+    
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
@@ -138,15 +137,15 @@ chart_2_page <- tabPanel(
         selected = "GDP.per.capita"
       )
     ),
-
+    
     # Display bar graph in main panel
     mainPanel(
-      h3("2015 Global GDP & Number of Tourists Outbound"),
-      p("This chart attempts to display an interactive map
-        to understand GDP per capita and number of tourists
-        around the globe specifically in 2015. Using this
-        interactive map, we are able to compare and contrast
-        the difference in GDP per capita and number of tourists
+      h3("GDP & Number of Outbound Tourists in 2015"),
+      p("This chart attempts to display an interactive map 
+        to understand GDP per capita and number of tourists 
+        around the globe specifically in 2015. Using this 
+        interactive map, we are able to compare and contrast 
+        the difference in GDP per capita and number of tourists 
         between each country in 2015."),
       plotlyOutput("map")
     )
@@ -154,8 +153,8 @@ chart_2_page <- tabPanel(
 )
 
 chart_3_page <- tabPanel(
-  "GDP vs. Tourism Chart",
-  titlePanel("GDP vs. Tourism Chart"),
+  "Toursists in 1995 to 2015 Bar Chart",
+  titlePanel("Toursists & GDP in 1995 to 2015 Chart"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -167,18 +166,15 @@ chart_3_page <- tabPanel(
                   selected = "World")
     ),
     mainPanel(
-      h3("Total Tourists Outbound (1995 - 2016)"),
-      p("This chart attempts to display an interactive plot of
-        all countries/entities with their average GDP per capita
-        and Tourists from 1995 to 2016. This plot shows the
-        relationship between number of outbound tourists and
+      h3("Total Tourists per Year with Average GDP"),
+      p("This chart attempts to display an interactive plot of 
+        all countries/entities with their average GDP per capita 
+        and Tourists from 1995 to 2016. This plot shows the 
+        relationship between number of outbound tourists and 
         prosperity of the home country from 1995 to 2016. "),
       plotlyOutput("bar_graph"),
       h3("Findings"),
-      p("- The plot indicates that countries with higher GDP
-        per Capita is not always the country that has the
-        most tourist outbound."),
-      p("- In general, all countries seem to have a higher
+      p("- In general, all countries seem to have a higher 
         GDP per Capita when they have a higher number of outbound
         tourists as the years go by.")
     )
@@ -197,35 +193,42 @@ conclusion <- tabPanel(
       width = 7,
       h1("Key Takeaways"),
       h2("Takeaway 1"),
-      p("As demonstrated in 'Country vs. Tourism Visualization', the GDP
-       per Capita will increase on a yearly basis for most countries.
-       For example, the GDP per capita in the United States increased
-       from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
-       implies that with time, countries will experience economic growth,
-       likely as a result from the expansion of globalization and
-       advancement of technology."),
+      p("1) Does a country's GDP per Capita increase on a 
+        yearly basis?"),
+      p("As demonstrated in 'Tourists vs. GDP Plot', the GDP
+        per Capita will increase on a yearly basis for most countries.
+        For example, the GDP per capita in the United States increased
+        from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
+        implies that with time, countries will experience economic growth,
+        likely as a result from the expansion of globalization and
+        advancement of technology. Therefore, a country's GDP per Capita
+        increases generally on a yearly basis as shown in 'Tourists vs. 
+        GDP Plot'."),
       h2("Takeaway 2"),
-      p("The 'Country vs. Tourism Visualization' also indicates that
-        the outbound tourism in most developed countries grows over time.
-        For example, the number of outbound tourists from South Korea
-        in 2000 was 5,508,000. Later in 2015, the number of outbound
-        tourists was 19,310,000. This insight suggests that as a
-        country develops over time, technology allows international
-        travel to become more accessible. Additionally, its
-        citizens will likely have more funds to use to travel."),
+      p("2) Do outbound tourists per country increase when the 
+        GDP per capita increases?"),
+      p("The 'GDP & Tourism Map' indicates that as GDP per Capita 
+        increases, so does the number of outbound tourists for 
+        the majority of countries. For example, when the GDP 
+        per capita in China was $2564.07 in 1995, the number of
+        outbound tourists was 4,520,000. Later in 2016, the GDP per
+        capita was $14400.89 and the number of outbound tourists was
+        135,130,000. This insight suggests that as a country becomes
+        more properous (higher GDP), its citizens will have more
+        disposable funds to use for international travel."),
       h2("Takeaway 3"),
-      p("The 'GDP vs. Tourism Chart' indicates that an increase in
-        GDP per Capita does not always correlate with a country's
-        increase its number of outbound tourists. For example, when the
-        GDP per capita in Denmark was $45865.80 in 2008, the number of
-        outbound tourists was 6,347,000. The year after in 2009, the
-        GDP per capita decreased to $43,382.63, while the number of
-        outbound tourists increased to 7,037,000. This insight suggests
-        that while a country's GDP per capita can impact its number of
-        outbound tourists, it is not a directly proportional relationship.
-        Additionally, this suggests there are other factors outside the
-        scope of this data that impact a country's number of outbound
-        tourists (for example, weather and political climate)."),
+      p("3) Do more developed countries with better economy per year
+        increase tourism over time?"),
+      p("Tourists in 1995 to 2015 Bar Chart' indicates that the outbound 
+        tourism in most developed countries when their GDP per capita 
+        increases, grows over time. For example, the number of outbound 
+        tourists from South Korea in 2000 was 5,508,000. Later in 
+        2015, the number of outbound tourists was 19,310,000. This 
+        insight suggests that as a country develops over time, with 
+        a higher average GDP per Capita, it allows international 
+        travel to become more accessible. Additionally, its citizens 
+        will likely have more funds to use to travel due to a better 
+        economy.")
     )
   )
 )
