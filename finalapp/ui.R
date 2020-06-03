@@ -181,7 +181,7 @@ chart_3_page <- tabPanel(
                   selected = "World")
     ),
     mainPanel(
-      h3("Total Tourists per Year with Average GDP"),
+      h3("Total Outbound Tourists per Year with Average GDP"),
       p("This chart attempts to display an interactive plot of
         all countries/entities with their average GDP per capita
         and Tourists from 1995 to 2016. This plot shows the

@@ -22,7 +22,7 @@ get_bar_graph <- function(df) {
   chart_3 <- ggplot(data = country_tourists_vs_gdp) +
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
-    labs(fill = "Average GDP per Capita ($)") +
+    labs(fill = "Average GDP per Capita ($)", y = "Outbound Tourists") +
     scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) +
     scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
 
