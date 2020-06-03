@@ -134,5 +134,5 @@ ui <- navbarPage(
   about,
   chart_1_page,
   chart_2_page,
-  chart_3_page)
-
+  chart_3_page
+  )
