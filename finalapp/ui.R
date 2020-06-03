@@ -103,7 +103,7 @@ chart_1_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
-      h3("Number of Outbound Tourists vs. GDP per Capita"),
+      h3("Number of Outbound Tourists vs. GDP per Capita (1995-2016)"),
       p("This chart attempts to understand the relationship
         between the total number of tourists in the world
         per year and the average GDP per Capita. In this chart,
@@ -169,7 +169,7 @@ chart_2_page <- tabPanel(
 # Page 3
 chart_3_page <- tabPanel(
   "Tourists vs. Year",
-  titlePanel("Tourists vs. Year Bar Graph, 1995 to 2016"),
+  titlePanel("Tourists vs. Year Bar Graph"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -181,7 +181,7 @@ chart_3_page <- tabPanel(
                   selected = "World")
     ),
     mainPanel(
-      h3("Total Outbound Tourists per Year with Average GDP"),
+      h3("Total Outbound Tourists per Year with Average GDP (1995-2016)"),
       p("This chart attempts to display an interactive plot of
         all countries/entities with their average GDP per capita
         and Tourists from 1995 to 2016. This plot shows the
