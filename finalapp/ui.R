@@ -168,8 +168,8 @@ chart_2_page <- tabPanel(
 
 # Page 3
 chart_3_page <- tabPanel(
-  "Toursism vs GDP Bar Graph (1995-2016",
-  titlePanel("Toursists & GDP, 1995 to 2016"),
+  "Tourists vs. Year",
+  titlePanel("Tourists vs. Year Bar Graph, 1995 to 2016"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -233,7 +233,7 @@ conclusion <- tabPanel(
       h2("Takeaway 3"),
       p("3) Do more developed countries with better economy per year
         increase tourism over time?"),
-      p("Tourists in 1995 to 2015 Bar Chart' indicates that the outbound
+      p("'Tourists vs. Year Bar Graph' indicates that the outbound
         tourism in most developed countries when their GDP per capita
         increases, grows over time. For example, the number of outbound
         tourists from South Korea in 2000 was 5,508,000. Later in
