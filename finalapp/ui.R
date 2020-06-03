@@ -207,7 +207,7 @@ conclusion <- tabPanel(
       width = 7,
       h1("Key Takeaways"),
       h2("Takeaway 1"),
-      p("1) Does a country's GDP per Capita increase on a
+      h4("1) Does a country's GDP per Capita increase on a
         yearly basis?"),
       p("As demonstrated in 'Tourists vs. GDP Plot', the GDP
         per Capita will increase on a yearly basis for most countries.
@@ -219,7 +219,7 @@ conclusion <- tabPanel(
         increases generally on a yearly basis as shown in 'Tourists vs.
         GDP Plot'."),
       h2("Takeaway 2"),
-      p("2) Do outbound tourists per country increase when the
+      h4("2) Do outbound tourists per country increase when the
         GDP per capita increases?"),
       p("The 'GDP & Tourism Map' indicates that as GDP per Capita
         increases, so does the number of outbound tourists for
@@ -231,7 +231,7 @@ conclusion <- tabPanel(
         more properous (higher GDP), its citizens will have more
         disposable funds to use for international travel."),
       h2("Takeaway 3"),
-      p("3) Do more developed countries with better economy per year
+      h4("3) Do more developed countries with better economy per year
         increase tourism over time?"),
       p("'Tourists vs. Year Bar Graph' indicates that the outbound
         tourism in most developed countries when their GDP per capita
