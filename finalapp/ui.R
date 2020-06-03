@@ -16,7 +16,7 @@ about <- tabPanel(
   "About",
   sidebarLayout(
     sidebarPanel(
-      h2("About the data"),
+      h2("About the Data"),
       p("The data was collected through several avenues. The
         country's prosperity was calculated based on the
         Global World Bank's World Development Indicators
@@ -53,8 +53,8 @@ about <- tabPanel(
 )
 
 chart_1_page <- tabPanel(
-  "Country vs Tourism Visualization",
-  titlePanel("Country vs Tourism Visualization"),
+  "Country vs. Tourism Visualization",
+  titlePanel("Country vs. Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
@@ -63,7 +63,7 @@ chart_1_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
-      h3("Number of tourists vs GDP per Capita (1995 - 2016)"),
+      h3("Number of Tourists vs. GDP per Capita (1995 - 2016)"),
       p("This plot shows the relationship between number of
         outbound tourists and prosperity of the home country
         from 1995 to 2016. "),
@@ -106,8 +106,8 @@ chart_2_page <- tabPanel(
 )
 
 chart_3_page <- tabPanel(
-  "GDP vs Tourism Chart",
-  titlePanel("Country vs Tourism Visualization"),
+  "GDP vs. Tourism Chart",
+  titlePanel("Country vs. Tourism Visualization"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -130,7 +130,7 @@ chart_3_page <- tabPanel(
 )
 
 ui <- navbarPage(
-  "Tourism vs GDP",
+  "Tourism vs. GDP",
   theme = shinytheme("journal"),
   about,
   chart_1_page,
