@@ -90,7 +90,7 @@ about <- tabPanel(
 
 # Page 1
 chart_1_page <- tabPanel(
-  "Tourists vs. GDP Plot",
+  "Tourists vs. GDP",
   titlePanel("Tourists vs. GDP Plot"),
   sidebarLayout(
     sidebarPanel(
