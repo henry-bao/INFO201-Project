@@ -224,7 +224,7 @@ conclusion <- tabPanel(
       p("The 'GDP & Tourism Map' indicates that as GDP per Capita
         increases, so does the number of outbound tourists for
         the majority of countries. For example, when the GDP
-        per capita in China was $2564.07 in 1995, the number of
+        per Capita in China was $2564.07 in 1995, the number of
         outbound tourists was 4,520,000. Later in 2016, the GDP per
         capita was $14400.89 and the number of outbound tourists was
         135,130,000. This insight suggests that as a country becomes
