@@ -92,7 +92,10 @@ chart_1_page <- tabPanel(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
                   label = h4("Select Location"),
-                  choices = unique(df$Entity[!is.na(df$Tourists)]),
+                  choices = list(
+                    "Country" = country$c_names,
+                    "Region" = region$r_names,
+                    "Income Level" = income$inc_lvl),
                   selected = "United States")
     ),
     mainPanel(
@@ -155,7 +158,10 @@ chart_3_page <- tabPanel(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
                   label = h4("Select Location"),
-                  choices = unique(df$Entity[!is.na(df$Tourists)]),
+                  choices = list(
+                    "Country" = country$c_names,
+                    "Region" = region$r_names,
+                    "Income Level" = income$inc_lvl),
                   selected = "World")
     ),
     mainPanel(
