@@ -81,7 +81,7 @@ about <- tabPanel(
       p("1) Does a country's GDP per Capita increase on a
         yearly basis?"),
       p("2) Do outbound tourists per country increase when the
-        GDP per capita increases?"),
+        GDP per Capita increases?"),
       p("3) Do more developed countries with better economy per year
         increase tourism over time?")
     )
@@ -146,10 +146,10 @@ chart_2_page <- tabPanel(
     mainPanel(
       h3("GDP & Number of Outbound Tourists in 2015"),
       p("This chart attempts to display an interactive map
-        to understand GDP per capita and number of tourists
+        to understand GDP per Capita and number of tourists
         around the globe specifically in 2015. Using this
         interactive map, we are able to compare and contrast
-        the difference in GDP per capita and number of tourists
+        the difference in GDP per Capita and number of tourists
         between each country in 2015."),
       plotlyOutput("map"),
       h3("Findings"),
@@ -159,8 +159,8 @@ chart_2_page <- tabPanel(
         on a country's population. For instance, China is known to
         have an extremely high population. Thus, having an exceeding
         amount of outbound tourists like 127,860,000 with a GDP
-        per capita of 13569.89 compared to the United States in which
-        they had 73,453,000 outbound tourists with a GDP per capita of
+        per Capita of 13569.89 compared to the United States in which
+        they had 73,453,000 outbound tourists with a GDP per Capita of
         53005.64 - a lot higher than China's.")
     )
   )
@@ -183,7 +183,7 @@ chart_3_page <- tabPanel(
     mainPanel(
       h3("Total Outbound Tourists per Year with Average GDP (1995-2016)"),
       p("This chart attempts to display an interactive plot of
-        all countries/entities with their average GDP per capita
+        all countries/entities with their average GDP per Capita
         and Tourists from 1995 to 2016. This plot shows the
         relationship between number of outbound tourists and
         prosperity of the home country from 1995 to 2016. "),
@@ -211,7 +211,7 @@ conclusion <- tabPanel(
         yearly basis?"),
       p("As demonstrated in 'Tourists vs. GDP Plot', the GDP
         per Capita will increase on a yearly basis for most countries.
-        For example, the GDP per capita in the United States increased
+        For example, the GDP per Capita in the United States increased
         from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
         implies that with time, countries will experience economic growth,
         likely as a result from the expansion of globalization and
@@ -220,13 +220,13 @@ conclusion <- tabPanel(
         GDP Plot'."),
       h2("Takeaway 2"),
       h4("2) Do outbound tourists per country increase when the
-        GDP per capita increases?"),
+        GDP per Capita increases?"),
       p("The 'GDP & Tourism Map' indicates that as GDP per Capita
         increases, so does the number of outbound tourists for
         the majority of countries. For example, when the GDP
         per Capita in China was $2564.07 in 1995, the number of
         outbound tourists was 4,520,000. Later in 2016, the GDP per
-        capita was $14400.89 and the number of outbound tourists was
+        Capita was $14400.89 and the number of outbound tourists was
         135,130,000. This insight suggests that as a country becomes
         more properous (higher GDP), its citizens will have more
         disposable funds to use for international travel."),
@@ -234,7 +234,7 @@ conclusion <- tabPanel(
       h4("3) Do more developed countries with better economy per year
         increase tourism over time?"),
       p("'Tourists vs. Year Bar Graph' indicates that the outbound
-        tourism in most developed countries when their GDP per capita
+        tourism in most developed countries when their GDP per Capita
         increases, grows over time. For example, the number of outbound
         tourists from South Korea in 2000 was 5,508,000. Later in
         2015, the number of outbound tourists was 19,310,000. This
