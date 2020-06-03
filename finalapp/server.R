@@ -19,7 +19,7 @@ source("../scripts/chart-3.R")
 
 # Define variables for map
 ## Filter data to 2016
-df <- tourists_vs_gdp %>%
+tourists_vs_gdp_2016 <- df %>%
 filter(Year == "2016")
 
 ## Map light grey boundaries
