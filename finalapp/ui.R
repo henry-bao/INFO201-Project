@@ -8,7 +8,7 @@ library("plotly")
 library("shinythemes")
 
 # Load data frame
-df <- read.csv("./data/tourists-vs-gdp.csv",
+df <- read.csv("../data/tourists-vs-gdp.csv",
                stringsAsFactors = FALSE)
 
 # About page
@@ -81,6 +81,7 @@ chart_2_page <- tabPanel(
   
   # Sidebar with a selectInput for the population variable 
   sidebarLayout(
+    
     sidebarPanel(
       # Radio buttons for the color of the graph
       radioButtons(
