@@ -18,6 +18,7 @@ t <- data.frame(unique(df$Entity[!is.na(df$Tourists)]))
 country <- df %>%
   filter(Year == 2000) %>%
   filter(Entity != "World") %>%
+  filter(Entity %in% Entity[!is.na(Tourists)]) %>%
   filter(Code != "")
 
 # Get region names
