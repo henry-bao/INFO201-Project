@@ -267,7 +267,7 @@ fun_facts <- tabPanel(
         them from upsetting their stomachs at the same time during a
         flight."),
       p("5) Statistically, a plane is actually the safest mode of
-        transport in the world"),
+        transport in the world."),
       p("6) Vatican is the smallest country in the world, next being
         Monaco."),
       p("7) Las Vegas has the largest number of hotel rooms in the
