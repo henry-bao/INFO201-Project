@@ -51,7 +51,9 @@ about <- tabPanel(
         This data set covers from 1995 to 2016."),
       tags$img(src = "money.jpg", width = "100%"),
       p(" "),
-      actionButton(inputId = "ab1", label = "Learn More",
+      actionButton(inputId = "ab1", 
+                   label = "Learn More",
+                   class = "btn-primary",
                    onclick = "window.open('https://bit.ly/3gP3Rg4', '_blank')")
     ),
     mainPanel(
