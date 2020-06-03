@@ -18,7 +18,7 @@ source("../scripts/chart-2.R")
 source("../scripts/chart-3.R")
 
 # Define server function
-server <- function(session, input, output) {
+server <- function(input, output) {
 
   ##Render plot
   output$plot <- renderPlotly({
