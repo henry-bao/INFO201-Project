@@ -23,7 +23,8 @@ get_bar_graph <- function(df) {
     geom_col(mapping = aes(x = Year, y = Tourists,
                            fill = GDP.per.capita)) +
     labs(title = "Total Tourists (outbound) in the World, 1995 to 2016",
-         fill = "Average GDP per Capita ($)")
+         fill = "Average GDP per Capita ($)") +
+    scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
 
   #return bar graph
   ggplotly(chart_3)
