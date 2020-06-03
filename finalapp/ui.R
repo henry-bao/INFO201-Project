@@ -151,7 +151,17 @@ chart_2_page <- tabPanel(
         interactive map, we are able to compare and contrast
         the difference in GDP per capita and number of tourists
         between each country in 2015."),
-      plotlyOutput("map")
+      plotlyOutput("map"),
+      h3("Findings"),
+      p("- Countries who have higher GDP per Capita have more 
+        outbound tourists."),
+      p("- However, the number of outbound tourists also depends 
+        on a country's population. For instance, China is known to 
+        have an extremely high population. Thus, having an exceeding 
+        amount of outbound tourists like 127,860,000 with a GDP 
+        per capita of 13569.89 compared to the United States in which 
+        they had 73,453,000 outbound tourists with a GDP per capita of 
+        53005.64 - a lot higher than China's.")
     )
   )
 )
@@ -182,6 +192,7 @@ chart_3_page <- tabPanel(
       p("- In general, all countries seem to have a higher
         GDP per Capita when they have a higher number of outbound
         tourists as the years go by.")
+      
     )
   )
 )
