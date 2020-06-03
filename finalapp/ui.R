@@ -118,14 +118,14 @@ chart_2_page <- tabPanel(
         inputId = "radio_data",
         label = h4("Display Data By"),
         choiceNames = c("GDP Per Capita", "Tourists"),
-        choiceValues = c("GDP.per.capita", "Tourists"),
+        choiceValues = c("~GDP.per.capita", "~Tourists"),
         selected = "GDP.per.capita"
       )
     ),
     
     # Display bar graph in main panel
     mainPanel(
-      h3("2016 Global GDP $ Number of Tourists Outbound"),
+      h3("2016 Global GDP & Number of Tourists Outbound"),
       p(paste("to be filled")),
       plotlyOutput("map")
     )
@@ -140,7 +140,7 @@ chart_3_page <- tabPanel(
       selectInput(inputId = "choose_country_bar",
                   label = h4("Select Location"),
                   choices = unique(df$Entity[!is.na(df$Tourists)]),
-                  selected = "United States")
+                  selected = "World")
     ),
     mainPanel(
       h3("Total Tourists Outbound (1995 - 2016)"),

@@ -53,10 +53,11 @@ server <- function(session, input, output) {
     #map
     plot_geo(tourists_vs_gdp_2016) %>%
       add_trace(
-        z = ~input$radio_data, color = ~input$radio_data, colors = "Blues",
-        text = hover_text, locations = ~Code, marker = list(line = l)
+        z = ~GDP.per.capita, color = ~GDP.per.capita,
+        colors = "Blues", text = hover_text,
+        locations = ~Code, marker = list(line = l)
       ) %>%
-      colorbar(title = input$radio_data) %>%
+      colorbar(title = "GDP Per Capita") %>%
       layout(geo = g)
     )
 
