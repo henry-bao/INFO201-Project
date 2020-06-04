@@ -8,7 +8,7 @@ library("plotly")
 library("shinythemes")
 
 # Load data frame
-df <- read.csv("../data/tourists-vs-gdp.csv",
+df <- read.csv("data/tourists-vs-gdp.csv",
                stringsAsFactors = FALSE)
 
 # Get location names
