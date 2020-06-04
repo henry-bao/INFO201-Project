@@ -8,7 +8,7 @@ library("plotly")
 library("shinythemes")
 
 # Load data frame
-df <- read.csv("data/tourists-vs-gdp.csv",
+df <- read.csv("../data/tourists-vs-gdp.csv",
                stringsAsFactors = FALSE)
 
 # Get location names
@@ -68,7 +68,7 @@ about <- tabPanel(
         also an activity that can bring benefits to a country's
         government and its local residents. Such activity
         is recognized in almost every nation in the world."),
-      h3("What's GDP and what does it have to do with Tourism?"),
+      h3("What is GDP and what does it have to do with Tourism?"),
       p("GDP stands for Gross Domestic Product. GDP measures
         the value of economic activity within a country.
         It is important for us to know how the wealth of
@@ -90,8 +90,8 @@ about <- tabPanel(
 
 # Page 1
 chart_1_page <- tabPanel(
-  "Tourists vs. GDP",
-  titlePanel("Tourists vs. GDP Plot"),
+  "Outbound Tourists vs. GDP",
+  titlePanel("Outbound Tourists vs. GDP Plot"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_plot",
@@ -125,8 +125,8 @@ chart_1_page <- tabPanel(
 
 # Page 2
 chart_2_page <- tabPanel(
-  "GDP & Tourism Map",
-  titlePanel("GDP & Tourism Map"),
+  "2015 GDP & Outbound Tourism World Map",
+  titlePanel("GDP & Outbound Tourism per Country in 2015 World Map"),
 
   # Sidebar with a selectInput for the population variable
   sidebarLayout(
@@ -168,8 +168,8 @@ chart_2_page <- tabPanel(
 
 # Page 3
 chart_3_page <- tabPanel(
-  "Tourists vs. Year",
-  titlePanel("Tourists vs. Year Bar Graph"),
+  "Outbound Tourists vs. Year",
+  titlePanel("Outbound Tourists vs. Year Bar Graph"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "choose_country_bar",
@@ -209,7 +209,7 @@ conclusion <- tabPanel(
       h2("Takeaway 1"),
       h4("1) Does a country's GDP per Capita increase on a
         yearly basis?"),
-      p("As demonstrated in 'Tourists vs. GDP Plot', the GDP
+      p("As demonstrated in 'Outbound Tourists vs. GDP Plot', the GDP
         per Capita will increase on a yearly basis for most countries.
         For example, the GDP per Capita in the United States increased
         from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
@@ -221,19 +221,20 @@ conclusion <- tabPanel(
       h2("Takeaway 2"),
       h4("2) Do outbound tourists per country increase when the
         GDP per Capita increases?"),
-      p("The 'GDP & Tourism Map' indicates that as GDP per Capita
-        increases, so does the number of outbound tourists for
-        the majority of countries. For example, when the GDP
-        per Capita in China was $2564.07 in 1995, the number of
-        outbound tourists was 4,520,000. Later in 2016, the GDP per
-        Capita was $14400.89 and the number of outbound tourists was
-        135,130,000. This insight suggests that as a country becomes
+      p("The 'GDP & Outbound Tourism per Country in 2015 World Map'
+        indicates that as GDP per Capita increases, so does the number
+        of outbound tourists for the majority of countries.
+        For example, when the GDP per Capita in China was
+        $2564.07 in 1995, the number of outbound tourists
+        was 4,520,000. Later in 2016, the GDP per Capita was $14400.89
+        and the number of outbound tourists was 135,130,000.
+        This insight suggests that as a country becomes
         more properous (higher GDP), its citizens will have more
         disposable funds to use for international travel."),
       h2("Takeaway 3"),
       h4("3) Do more developed countries with better economy per year
         increase tourism over time?"),
-      p("'Tourists vs. Year Bar Graph' indicates that the outbound
+      p("'Outbound Tourists vs. Year Bar Graph' indicates that the outbound
         tourism in most developed countries when their GDP per Capita
         increases, grows over time. For example, the number of outbound
         tourists from South Korea in 2000 was 5,508,000. Later in
@@ -282,7 +283,7 @@ fun_facts <- tabPanel(
 
 # Define ui
 ui <- navbarPage(
-  "Tourism vs. GDP",
+  "Tourism Around the World vs. GDP",
   theme = shinytheme("journal"),
   about,
   chart_1_page,
