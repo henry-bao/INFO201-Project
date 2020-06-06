@@ -24,7 +24,10 @@ get_plot <- function(df) {
   # Creating plot
   chart_1 <- ggplot(data = tourists_vs_gdp_1995_2016) +
     geom_point(mapping = aes(x = GDP.per.capita, y = Tourists,
-                             color = Year, text = paste("Entity:", Entity))
+                             color = Year, text = paste("Entity:", Entity),
+                             size = Tourists, alpha = 0.7)
+               ) +
+    scale_size(range = c(.1, 10)
                ) +
     labs(
       x = "GDP per capita", y = "Tourists Outbound", color = "Year") +
