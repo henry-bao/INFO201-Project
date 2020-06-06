@@ -19,7 +19,7 @@ country <- df %>%
   filter(Year == 2000) %>%
   filter(Entity != "World") %>%
   filter(Entity %in% Entity[!is.na(Tourists)]) %>%
-  filter(Entity %in% Entity[!is.na(GDP.per.capita)]) %>% 
+  filter(Entity %in% Entity[!is.na(GDP.per.capita)]) %>%
   filter(Code != "")
 
 # Get region names
@@ -104,6 +104,7 @@ chart_1_page <- tabPanel(
                   selected = "United States")
     ),
     mainPanel(
+      width = 7,
       h3("Number of Outbound Tourists vs. GDP per Capita (1995-2016)"),
       p("This chart attempts to understand the relationship
         between the total number of tourists in the world
@@ -145,6 +146,7 @@ chart_2_page <- tabPanel(
 
     # Display bar graph in main panel
     mainPanel(
+      width = 7,
       h3("GDP & Number of Outbound Tourists in 2015"),
       p("This chart attempts to display an interactive map
         to understand GDP per Capita and number of tourists
@@ -182,6 +184,7 @@ chart_3_page <- tabPanel(
                   selected = "World")
     ),
     mainPanel(
+      width = 7,
       h3("Total Outbound Tourists per Year with Average GDP (1995-2016)"),
       p("This chart attempts to display an interactive plot of
         all countries/entities with their average GDP per Capita
