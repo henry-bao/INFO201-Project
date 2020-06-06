@@ -19,6 +19,7 @@ country <- df %>%
   filter(Year == 2000) %>%
   filter(Entity != "World") %>%
   filter(Entity %in% Entity[!is.na(Tourists)]) %>%
+  filter(Entity %in% Entity[!is.na(GDP.per.capita)]) %>% 
   filter(Code != "")
 
 # Get region names
