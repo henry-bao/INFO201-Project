@@ -213,10 +213,10 @@ conclusion <- tabPanel(
       h2("Takeaway 1"),
       h4("1) Does a country's GDP per Capita increase on a
         yearly basis?"),
-      p("As demonstrated in 'Outbound Tourists vs. GDP Plot', the GDP
-        per Capita will increase on a yearly basis for most countries.
-        For example, the GDP per Capita in the United States increased
-        from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
+      p("As demonstrated in", strong("Outbound Tourists vs. GDP Plot"),
+        ", the GDP per Capita will increase on a yearly basis for most
+        countries. For example, the GDP per Capita in the United States
+        increased from $39,476.27 in 1995 up to $51,921.98 in 2014. This insight
         implies that with time, countries will experience economic growth,
         likely as a result from the expansion of globalization and
         advancement of technology. Therefore, a country's GDP per Capita
@@ -225,8 +225,8 @@ conclusion <- tabPanel(
       h2("Takeaway 2"),
       h4("2) Do outbound tourists per country increase when the
         GDP per Capita increases?"),
-      p("The 'GDP & Outbound Tourism per Country in 2015 World Map'
-        indicates that as GDP per Capita increases, so does the number
+      p("The", strong("GDP & Outbound Tourism per Country in 2015 World Map"),
+        "indicates that as GDP per Capita increases, so does the number
         of outbound tourists for the majority of countries.
         For example, when the GDP per Capita in China was
         $2564.07 in 1995, the number of outbound tourists
@@ -238,8 +238,8 @@ conclusion <- tabPanel(
       h2("Takeaway 3"),
       h4("3) Do more developed countries with better economy per year
         increase tourism over time?"),
-      p("'Outbound Tourists vs. Year Bar Graph' indicates that the outbound
-        tourism in most developed countries when their GDP per Capita
+      p(strong("Outbound Tourists vs. Year Bar Graph"), "indicates that the
+        outbound tourism in most developed countries when their GDP per Capita
         increases, grows over time. For example, the number of outbound
         tourists from South Korea in 2000 was 5,508,000. Later in
         2015, the number of outbound tourists was 19,310,000. This
