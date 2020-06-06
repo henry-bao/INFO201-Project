@@ -35,5 +35,7 @@ get_plot <- function(df) {
     scale_color_gradient(high = "red", low = "yellow")
 
   # Making the plot interactive
-  ggplotly(chart_1)
+  ggplotly(chart_1) %>%
+    layout(xaxis = list(autorange = TRUE),
+           yaxis = list(autorange = TRUE))
 }
