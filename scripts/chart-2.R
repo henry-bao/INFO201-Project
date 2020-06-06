@@ -40,7 +40,7 @@ get_map <- function(df, input) {
       add_trace(
         hoverinfo = "text", z = ~GDP.per.capita, color = ~GDP.per.capita,
         text = hover_text, locations = ~Code,
-        marker = list(line = l)
+        marker = list(line = l), colorscale = "Inferno"
       ) %>%
       colorbar(title = "GDP per Capita", tickprefix = "$") %>%
       layout(geo = g)
@@ -54,7 +54,7 @@ get_map <- function(df, input) {
       add_trace(
         hoverinfo = "text", z = ~Tourists, color = ~Tourists,
         text = hover_text, locations = ~Code,
-        marker = list(line = l)
+        marker = list(line = l), colorscale = "Inferno"
       ) %>%
       colorbar(title = "Tourists") %>%
       layout(geo = g)
