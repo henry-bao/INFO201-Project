@@ -27,7 +27,7 @@ get_plot <- function(df) {
                              color = Year, text = paste("Entity:", Entity),
                              size = Tourists, alpha = 0.7)
                ) +
-    scale_size(range = c(.1, 10)
+    scale_size(range = c(.1, 15)
                ) +
     labs(
       x = "GDP per capita", y = "Tourists Outbound", color = "Year") +
